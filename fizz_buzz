@@ -1,0 +1,19 @@
+j = 3
+k = 5
+for(i in 1:100){
+	if(i %% k == 0 && i %% 3 == 0){
+		print ("FizzBuzz")
+		next
+	}
+	if(i %% k == 0){
+		print("Fizz")
+		next
+	}
+	if(i %% j == 0){
+		print("Buzz")
+		next
+	}
+	else{
+		print(i)
+	}
+}
