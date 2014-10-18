@@ -1,0 +1,14 @@
+#reverse a string in R
+string = "stringy"
+
+reverse_string = vector()
+
+string_split = strsplit(string, "")
+
+for(i in 1:(length(string_split[[1]]))){
+	j = length(string_split[[1]]) - i + 1
+	print(j)
+	reverse_string[i] = string_split[[1]][j]
+}
+
+reversed_string = paste(reverse_string, collapse = "")
