@@ -1,0 +1,10 @@
+a = 1
+b = 2
+n = 10
+
+for(i in 1:n){
+	c = a+b
+	a = b
+	b = c
+	print(c)
+}
