@@ -50,3 +50,17 @@ cppFunction('NumericVector diff_calc(NumericVector x, int y = 1) {
 	return out;
 	
 }')
+
+cppFunction('NumericVector range(NumericVector x) {
+  NumericVector range(2); 
+  
+  double result=0;
+  result = F1(a);  min = pmin(x);
+  int max;
+  max = pmax(x);
+  
+  range[0] = min;
+  range[1] = max;
+
+  return range;
+}')
