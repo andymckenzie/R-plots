@@ -1,3 +1,5 @@
+#looks like I was kind of wrong about what cummax et al do; see ?cummax for more; leaving this for now, though
+
 library(Rcpp)
 
 cppFunction('int cum_prod(NumericVector x) {
