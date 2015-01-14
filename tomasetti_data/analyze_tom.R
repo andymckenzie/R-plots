@@ -5,8 +5,16 @@ cor(tom_data$Lifetime_Incidence, as.numeric(tom_data$Total_SC_Divions_Lifetime_T
  
 tom_data[tom_data$Lifetime_Incidence > 0.03, ] 
 
-qplot(tom_data$Lifetime_Incidence, as.numeric(tom_data$Total_SC_Divions_Lifetime_Tissue), xlab = "Lifetime Cancer Incidence", ylab = "Total SC Divisions Lifetime") + theme_bw()
+qplot(tom_data$Lifetime_Incidence, 
+	as.numeric(tom_data$Total_SC_Divions_Lifetime_Tissue), 
+	xlab = "Lifetime Cancer Incidence", 
+	ylab = "Total SC Divisions Lifetime") + 
+	theme_bw() + stat_smooth(method="lm",se=TRUE)
 
-qplot(log(tom_data$Lifetime_Incidence), log(as.numeric(tom_data$Total_SC_Divions_Lifetime_Tissue)), xlab = "Lifetime Cancer Incidence", ylab = "Total SC Divisions Lifetime") + theme_bw()
+qplot(log(tom_data$Lifetime_Incidence), 
+	log(as.numeric(tom_data$Total_SC_Divions_Lifetime_Tissue)), 
+	xlab = "Lifetime Cancer Incidence", 
+	ylab = "Total SC Divisions Lifetime") + 
+	theme_bw() + stat_smooth(method="lm",se=TRUE)
 
 #testing more changes
