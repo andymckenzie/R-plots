@@ -1,3 +1,5 @@
+library(ggplot2)
+
 tom_data = read.table(file = "/Users/amckenz/Dropbox/zhang/journal_club/tomasetti_data.txt", 
 	header = TRUE, sep = " ", row.names = NULL, fill = TRUE) 
 
