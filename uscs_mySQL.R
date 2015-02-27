@@ -14,5 +14,6 @@ ucsc_ids='uc007aet.1' ## IDs to convert
 
  
 # Get the UCSC gene name, start and end sites for the first 10 genes on Chromosome 12
-chr12_first = query("SELECT name, chrom, txStart, cdsStart, cdsEnd, txEnd FROM hg19.knownGene WHERE name='BACE1'")
+#exonCount > 100
+chr12_first = query("SELECT * FROM hg19.knownGene WHERE proteinID = 'PSEN1';")
  
