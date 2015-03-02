@@ -1,0 +1,10 @@
+;
+; This Drake workflow allows users to search freebase for entities by name. Then summarizes the types of objects which the resulting entities are. 
+;
+
+search_term="drake" 
+;This step fetches the freebase search result based on your search term
+$[search_term].json <- 
+    echo 'https://www.googleapis.com/freebase/v1/search?query=$[search_term]&output=(type)' > tmp_url
+    cat tmp_url
+    wget -i tmp_url -O $OUTPUT
