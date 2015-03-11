@@ -1,22 +1,29 @@
 Group	Food	Food Notes	Cost (in $)	Calories	Carbs	Calories_Per_Dollar	Glycemic Index	Cals/Glycemic Load	True_Cals_GL_Ratio
-Starch	Butternut squash	Peeled	5	280	70	56	51	0.07843137255	0.1
-Starch	Basmati rice	Texmati Long Grain American	7.7	3740	726	486	55	0.09366391185	0.08
+Starch	Butternut squash	Peeled	5	280	70	56	51	0.07843137255	0.07843137255
+Starch	Basmati brown rice	Texmati Long Grain American	7.7	3740	726	486	55	0.09366391185	0.09366391185
 Starch	Dried lentils	Goya	1.8	980	266	544	33	0.1116427432	0.1116427432
-Starch	Sweet potatoes	Chunks	4	600	135	150	70	0.06349206349	0.07
-Starch	Mashed yams	Sweet	5	300	65	60	70	0.06593406593	0.055
-Starch	Yams	non-organic	0.91	100	23	110	70	0.06211180124	0.03
-Starch	White potatoes 	Black dirt region	4	1500	360	375	73	0.05707762557	0.047
-Protein	Salmon 	(lemon dill)	9	430	30	48	40	0.3583333333	0.44
+Starch	Sweet potatoes	Chunks	4	600	135	150	70	0.06349206349	0.06349206349
+Starch	Mashed yams	Sweet	5	300	65	60	70	0.06593406593	0.06593406593
+Starch	Yams	non-organic	0.91	100	23	110	70	0.06211180124	0.06211180124
+Starch	White potatoes 	Black dirt region	4	1500	360	375	73	0.05707762557	0.05707762557
+Protein	Salmon 	(lemon dill)	9	430	30	48	40	0.3583333333	0.3583333333
 Protein	Breaded chicken 	Free bird breaded chicken breast	6.7	960	68	143	45	0.3137254902	0.3137254902
-Side	Bananas		0.33	110	30	333	50	0.07333333333	0.095
+Side	Bananas		0.33	110	30	333	50	0.07333333333	0.07333333333
 Side	Greek yogurt 	fage, (2 percent but may want whole)	7.2	680	36	94	40	0.4722222222	0.4722222222
 Side	Cheddar cheese 	new york extra sharp 	8	1800	18	225	? (can't be tested bc carb content too low) 	? (probably set to 1) 	1
 Side	Milk 	(amish country whole)	4.5	1200	96	267	39	0.3205128205	0.3205128205
 Veggies	Brocolli	frozen  (birds eye) 	2.3	125	20	54	19	0.3289473684	0.3289473684
-Veggies	Mixed veggies 	frozen  (birds eye) 	2.6	240	48	92	? (because mixed... carrots ~ 40 for GI, nb) 	? (probably set to same as the brocolli) 	0.38
-Protein	Cali veg burger (*)	Dr. Praeger's	5	440	52	88	? (because mixed... mainly onions and string beans, so likely low-ish)	? (probably set to 1) 	0.55
-Protein	Kale veg burger (*)	Dr. Praeger's	5	520	56	104	3 (assuming kale as the main ingredient... but since its is so low others are like to dominate	? (probably set to 1) 	0.6
+Veggies	Mixed veggies 	frozen  (birds eye) 	2.6	240	48	92	? (because mixed... carrots ~ 40 for GI, nb) 	? (probably set to same as the brocolli) 	0.3289473684
+Protein	California veggie burger	Dr. Praeger's	5	440	52	88	? (because mixed... mainly onions and string beans, so likely low-ish)	? (probably set to 1) 	0.5
+Protein	Kale veggie burger	Dr. Praeger's	5	520	56	104	3 (assuming kale as the main ingredient... but since its is so low others are like to dominate	? (probably set to 1) 	0.5
 Starch	Quinoa 	(arrowhead mills organic)	6	1440	270	240	53	0.1006289308	0.1006289308
-Side	Mixed nuts	(salted)	22	4760	140	216	20	1.7	0.95
-Protein	Ground beef	grass fed	10	1060	0	106	n/a	set to 1 	1
-Protein	Sardines	brunswick (in oil)	1.9	130	0	68	n/a	set to 1 	0.95
+Side	Mixed nuts	(salted)	22	4760	140	216	20	1.7	1
+Protein 	Ground beef	grass fed	10	1060	0	106	n/a	set to 1 	1
+Protein 	Sardines	brunswick	1.9	130	0	68	n/a	set to 1 	1
+Side	Edam cheese	babybel	4	420	0	105	? (prolly can't be tested, as a cheese) 	1	1
+Side	Brie cheese	French Brie, 60% Double Cream	5.5	800	0	145	? (prolly can't be tested, as a cheese) 	1	1
+Side	Manchego cheese	mitica; three-month aged	3.75	508	0	135	? (prolly can't be tested, as a cheese) 	1	1
+Side	Mozarrella string	just fresh	4.6	960	0	209	? (prolly can't be tested, as a cheese) 	1	1
+Protein 	Tuna	bumble bee (in can in water)	2.19	120	0	55	0	1	1
+Protein 	Whey protein 	100% Whey Gold Standard, Double Rich Chocolate	58	8880	222	153	20	2	1
+Meal	Soylent	version 1.4	85	14000	1554	165	40	0.2252252252	0.22522
