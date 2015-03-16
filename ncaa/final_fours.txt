@@ -1,0 +1,37 @@
+#data from http://www.cbssports.com/collegebasketball/ncaa-tournament/history/finalfourseeds
+YEAR	SEEDS	TEAMS
+2013	1, 4, 4, 9	Louisville, Syracuse, Michigan, Wichita State
+2012	1, 2, 2, 4	Kentucky, Kansas, Ohio State, Louisville
+2011	3, 4, 8, 11	UConn, Kentucky, Butler, VCU
+2010	1, 2, 5, 5	Duke, West Virginia, Butler, Michigan State
+2009	1, 1, 2, 3	North Carolina, Connecticut, Michigan State, Villanova
+2008	1, 1, 1, 1	Kansas, Memphis, North Carolina, UCLA
+2007	1, 1, 2, 2	Florida, Ohio State, Georgetown, UCLA
+2006	2, 3, 4, 11	UCLA, Florida, LSU, George Mason
+2005	1, 1, 4, 5	North Carolina, Illinois, Louisville, Michigan State
+2004	1, 2, 2, 3	Duke, Connecticut, Oklahoma State, Georgia Tech
+2003	1, 2, 3, 3	Texas, Kansas, Marquette, Syracuse
+2002	1, 1, 2, 5	Maryland, Kansas, Oklahoma, Indiana
+2001	1, 1, 2, 3	Duke, Michigan State, Arizona, Maryland
+2000	1, 5, 8, 8	Michigan State, Florida, North Carolina, Wisconsin
+1999	1, 1, 1, 4	Connecticut, Duke, Michigan State, Ohio State
+1998	1, 2, 3, 3	North Carolina, Kentucky, Stanford, Utah
+1997	1, 1, 1, 4	Kentucky, Minnesota, North Carolina, Arizona
+1996	1, 1, 4, 5	Kentucky, Massachusetts, Syracuse, Mississippi State
+1995	1, 2, 2, 4	UCLA, Arkansas, North Carolina, Oklahoma State
+1994	1, 2, 2, 3	Arkansas, Arizona, Duke, Florida
+1993	1, 1, 1, 2	North Carolina, Kentucky, Michigan, Kansas
+1992	1, 2, 4, 6	Duke, Indiana, Cincinnati, Michigan
+1991	1, 1, 2, 3	UNLV, North Carolin, Duke, Kansas
+1990	1, 3, 4, 4	UNLV, Duke, Georgia Tech, Arkansas
+1989	1, 2, 3, 3	Illinois, Duke, Seton Hall, Michigan
+1988	1, 1, 2, 6	Arizona, Oklahoma, Duke, Kansas
+1987	1, 1, 2, 6	UNLV, Indiana, Syracuse, Providence
+1986	1, 1, 2, 11	Duke, Kansas, Louisville, LSU
+1985	1, 1, 2, 8	St. John's, Georgetown, Memphis, Villanova
+1984	1, 1, 2, 7	Kentucky, Georgetown, Houston, Virginia
+1983	1, 1, 4, 6	Houston, Louisville, Georgia, N.C. State
+1982	1, 1, 3, 6	North Carolina, Georgetown, Louisville, Houston
+1981	1, 1, 2, 3	Virginia, LSU, North Carolina, Indiana
+1980	2, 5, 6, 8	Louisville, Iowa, Purdue, UCLA
+1979	1, 2, 2, 9	Indiana State, Michigan State, DePaul, Pennsylvania

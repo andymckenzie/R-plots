@@ -1,10 +1,21 @@
 
-###########################
-### parameters for sim ###
-###########################
+final_fours = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/final_fours.txt", 
+	header = T, skip = 1, sep = '\t', quote = "", stringsAsFactors = F)
+final_fours = as.data.frame(table(as.numeric(gsub(" ", "", 
+	unlist(strsplit(final_fours$SEEDS, ","))))), stringsAsFactors = F)
+row_to_add = data.frame(rbind(cbind(10, 0), 
+	cbind(12, 0), 
+	cbind(13, 0), 
+	cbind(14, 0), 
+	cbind(15, 0), 
+	cbind(16, 0)))
+names(row_to_add) = names(final_fours)
+final_fours = rbind(final_fours, row_to_add)
+final_fours$Var1 = as.numeric(final_fours$Var1)
+mod = nls(Freq ~ exp(a + b * Var1), data = final_fours, start = list(a = 0, b = 0))
 
-#lower score for multiplier = more randomness
-rpi_multiplier = 5
+plot(final_fours$Var1, final_fours$Freq, xlab = "Seed", ylab = "Probability of Final Four") 
+lines(final_fours$Var1, predict(mod, list(x = final_fours$Var1)))
 
 ###########################
 ### load data ###
@@ -13,6 +24,7 @@ rpi_multiplier = 5
 rpid = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/sos_wl_data_espn.txt", 
 	skip = 1, header = T, sep = '\t', fill = T, quote = "")
 	
+#order of these goes 1, 16, 8, 9, 5, 12, 4, 13, 6, 11, 3, 14, 7, 10, 2, 15
 midwest = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_midwest.txt", 
 	header = F, sep = '\t')
 midwest = gsub(" $", "", midwest$V1)
@@ -41,6 +53,13 @@ east = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_eas
 east = gsub(" $", "", east$V1)
 east = gsub("State", "St", east)
 east = gsub("NC St", "NC State", east)
+
+###########################
+### parameters for sim ###
+###########################
+
+#lower score for multiplier = more randomness
+rpi_multiplier = 5
 
 ###########################
 ### simulation ###
@@ -89,12 +108,12 @@ sim_division <- function(region_teams){
 	return(div_winner)
 }
 
-midwest_result = replicate(1000, sim_division(midwest))
-west_result = replicate(1000, sim_division(west))
-east_result = replicate(1000, sim_division(east))
-south_result = replicate(1000, sim_division(south))
-
-print(table(midwest_result))
-print(table(west_result))
-print(table(east_result))
-print(table(south_result))
+# midwest_result = replicate(1000, sim_division(midwest))
+# west_result = replicate(1000, sim_division(west))
+# east_result = replicate(1000, sim_division(east))
+# south_result = replicate(1000, sim_division(south))
+#
+# print(table(midwest_result))
+# print(table(west_result))
+# print(table(east_result))
+# print(table(south_result))
