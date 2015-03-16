@@ -1,18 +1,50 @@
 
-#parameters for sim
+###########################
+### parameters for sim ###
+###########################
+
 #lower score for multiplier = more randomness
-rpi_multiplier = 8
+rpi_multiplier = 5
+
+###########################
+### load data ###
+###########################
 
 rpid = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/sos_wl_data_espn.txt", 
 	skip = 1, header = T, sep = '\t', fill = T, quote = "")
 	
-midwest = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket.txt", 
+midwest = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_midwest.txt", 
 	header = F, sep = '\t')
 midwest = gsub(" $", "", midwest$V1)
 
 #clean up names to match RPI data
 midwest = gsub("Wichita State", "Wichita St", midwest) 
 midwest = gsub("New Mexico St.", "New Mexico St", midwest) 
+
+west = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_west.txt", 
+	header = F, sep = '\t')
+west = gsub(" $", "", west$V1)
+west = gsub("State", "St", west)
+#exception
+west = gsub("Ohio St", "Ohio State", west)
+west = gsub("VCU", "Virginia Commonwealth", west)
+
+south = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_south.txt", 
+	header = F, sep = '\t')
+south = gsub(" $", "", south$V1)
+south = gsub("State", "St", south)
+#exception 
+south = gsub("Iowa St", "Iowa State", south)
+
+east = read.table("/Users/amckenz/Documents/github/R-plots/ncaa/2015_bracket_east.txt", 
+	header = F, sep = '\t')
+east = gsub(" $", "", east$V1)
+east = gsub("State", "St", east)
+east = gsub("NC St", "NC State", east)
+
+###########################
+### simulation ###
+###########################
 
 win_game <- function(team1, team2){
 	#assume that the play in team loses, cause they almost definitely will
@@ -57,6 +89,12 @@ sim_division <- function(region_teams){
 	return(div_winner)
 }
 
-result = replicate(1000, sim_division(midwest))
+midwest_result = replicate(1000, sim_division(midwest))
+west_result = replicate(1000, sim_division(west))
+east_result = replicate(1000, sim_division(east))
+south_result = replicate(1000, sim_division(south))
 
-print(table(result))
+print(table(midwest_result))
+print(table(west_result))
+print(table(east_result))
+print(table(south_result))
