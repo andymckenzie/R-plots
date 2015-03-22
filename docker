@@ -1,0 +1,7 @@
+#terminal commands i'm running in the boot2docker VM on my OSX to try to learn docker 
+
+docker run hello-world #this was pretty cool 
+
+docker run -it ubuntu bash #this runs an ubuntu container, once it dl's which takes awhile, ugh
+#so i cancelled with ctrl-c
+
