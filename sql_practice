@@ -1,0 +1,23 @@
+#from http://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial
+
+select yr, subject
+from nobel
+WHERE winner = 'Albert Einstein'
+
+SELECT winner
+from nobel 
+WHERE yr >= '2000'
+AND subject = 'peace'
+
+select yr, subject, winner
+from nobel 
+where yr >= '1980' 
+AND yr < '1990'
+AND subject = 'Literature'
+
+SELECT * FROM nobel
+WHERE winner in ('Theodore Roosevelt', 'Woodrow Wilson', 'Jed Bartlet', 'Jimmy Carter')
+
+SELECT winner FROM nobel
+WHERE winner REGEXP '^John'
+
