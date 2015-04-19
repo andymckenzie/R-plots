@@ -21,3 +21,6 @@ WHERE winner in ('Theodore Roosevelt', 'Woodrow Wilson', 'Jed Bartlet', 'Jimmy C
 SELECT winner FROM nobel
 WHERE winner REGEXP '^John'
 
+SELECT matchid, player 
+FROM goal 
+  WHERE  teamid = 'GER'
