@@ -2,7 +2,7 @@
 PATH_SRA_DIR="your_path_here/"
 
 #go to where your kallisto test directory is found, if necessary
-echo "cd your_path_here"
+cd "your_path_here"
 
 #load the config file
 source test_kallisto/config_SRP006900.file
