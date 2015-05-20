@@ -6,7 +6,7 @@ int power(int m, int n);
 int main()
 {
 	int i; 
-	for(i = 0; i < 20; ++i)
+	for(i = 0; i < 20git; ++i)
 		printf("%d %d %d\n", i, power(2, i), power(-3, i));
 	return 0; 
 }
