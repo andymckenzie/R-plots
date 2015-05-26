@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	char input_buffer[100];
 	int i = 0; /* index into input_buffer */
 	int c;
-	while ((c = getchar()) != '\n' && c != EOF) {
+	while ((c = getchar()) != EOF) {
 	    input_buffer[i] = c;
 	    i ++;
 	}
