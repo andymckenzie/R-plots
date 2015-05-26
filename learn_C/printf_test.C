@@ -1,14 +1,16 @@
 #include <stdio.h> 
 #include <ctype.h> 
 #include <stdlib.h>
+#include <unistd.h>
 
 int main (){
 	int c; 
-	char ch[100];
+	
+	if (isatty(fileno(stdout)))  /* #include <unistd.h> */
+	  setbuf(stdout, NULL);
 	
 	while ((c = getchar() != EOF))
-		itoa(c, ch, 10);
-		printf("%s", ch);
+		putchar(tolower(c));
 	return 0; 
 }
 	
