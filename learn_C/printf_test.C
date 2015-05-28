@@ -18,9 +18,10 @@ int main(int argc, char *argv[])
     /* Possible warnings will be encountered here, about implicit declaration
      * of `write` and `strlen`
      */
-	printf("%s \n", input_buffer);
+	printf("%-10.15s \n",  input_buffer);
 	
     /* write(1, input_buffer, strlen(input_buffer));
+	strlen returns the number of bytes transferred, theoretically 
     `1` is the standard output file descriptor, a.k.a. `STDOUT_FILENO` */
 
     return 0;
