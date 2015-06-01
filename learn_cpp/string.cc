@@ -12,11 +12,9 @@ int main(){
 	auto addr = compose("dmr","bell−labs.com");
 	cout << addr << "\n";
 	
-	string a = "test"; 
-	string b = "er"; 
-	string c = a + b; 
-	c += '\n'; 
-	
-	cout << c; 
+	int a = 1;
+	int b = 2; 
+	int c = a + b; 	
+	cout << hex << 7887 << '\n'; 
 	return 0;
 }
