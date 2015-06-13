@@ -24,3 +24,6 @@ WHERE winner REGEXP '^John'
 SELECT matchid, player 
 FROM goal 
   WHERE  teamid = 'GER'
+
+SELECT CustomerID, CustomerName, ContactName, Address
+ FROM Customers;
