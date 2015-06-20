@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
 
-results_file = "/Users/amckenz/Documents/bpf_survey/Batch_1950191_batch_results.csv"
+results_file = "/Users/amckenz/Documents/bpf_survey/Batch_1971592_batch_results.csv"
 
 res = read.table(file = results_file, sep = ",", header = T, fill = T)
 
@@ -14,6 +14,48 @@ res_only = res[ , c(data_columns_start:data_columns_end)]
 #statistcs of the BP questions segregated by demo variables
 #correlations among all of the variables 
 #linear models to predict BP responses based on the demo variables 
+
+############################################################
+#####            demographic data                      #####
+############################################################
+
+percent_female = sum(res$Answer.Gender == "Female")/
+	length(res$Answer.Gender)
+	
+barplot(prop.table(table(res$Answer.Education[res$Answer.Education != ""])), 
+	ylim = c(0,0.4)) 
+	
+health_factor = factor(res$Answer.Health[res$Answer.Health != ""], 
+		c("Poor", "Fair", "Good", "VeryGood", "Excellent"))
+	
+barplot(prop.table(table(health_factor)), ylim = c(0,0.4)) 
+	
+barplot(prop.table(table(res$Answer.Health[res$Answer.Health != ""])), 
+	ylim = c(0,0.4)) 
+
+barplot(prop.table(table(res$Answer.Living[res$Answer.Living != ""])), 
+	ylim = c(0,0.6)) 
+
+barplot(prop.table(table(res$Answer.WhereHeard[res$Answer.WhereHeard != ""])), 
+	ylim = c(0,0.7)) 
+
+barplot(prop.table(table(res$Answer.ReligionGeneral[res$Answer.ReligionGeneral != ""])), 
+	ylim = c(0,0.4)) 
+
+barplot(prop.table(table(res$Answer.ReligionSpecific[res$Answer.ReligionSpecific != ""])), 
+	ylim = c(0,0.6)) 
+	
+afterlife_factor = factor(res$Answer.Afterlife[res$Answer.Afterlife != ""], 
+		c("Yes", "LikelyYes", "Unsure", "No", "LikelyNo"))
+
+barplot(prop.table(table(afterlife_factor)), 
+	ylim = c(0,0.4)) 
+	
+barplot(prop.table(table(res$Answer.Money[res$Answer.Money != ""])), 
+	ylim = c(0,0.4)) 
+
+
+hist(res$Answer.Age, freq = F, ylab = "Proportion", xlab = "Age")
 
 ############################################################
 #####          converting likert to factor             #####    
