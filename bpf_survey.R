@@ -46,7 +46,7 @@ barplot(prop.table(table(res$Answer.ReligionSpecific[res$Answer.ReligionSpecific
 	ylim = c(0,0.6)) 
 	
 afterlife_factor = factor(res$Answer.Afterlife[res$Answer.Afterlife != ""], 
-		c("Yes", "LikelyYes", "Unsure", "No", "LikelyNo"))
+		c("Yes", "LikelyYes", "Unsure", "LikelyNo", "No"))
 
 barplot(prop.table(table(afterlife_factor)), 
 	ylim = c(0,0.4)) 
