@@ -32,7 +32,7 @@ set.seed(2014)
 #### gather web data: reference image and CRAN package count ####
  
 # load the R logo, save the rgb values:
-img = readImage("/Users/amckenz/Desktop/April.jpg")
+img = readImage("/Users/amckenz/Desktop/IMG_0878.JPG")
 img.2 = img[,,1:3]
  
 cran.site = "http://cran.r-project.org/web/packages/"
