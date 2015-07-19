@@ -8,8 +8,10 @@ sudo apt-get install g++ -y
 
 #following these instructions https://cran.r-project.org/bin/linux/ubuntu/
 #could also do nano /etc/apt/sources.list
-"deb http://lib.stat.cmu.edu/R/CRAN//bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
+line_add="deb http://lib.stat.cmu.edu/R/CRAN/bin/linux/ubuntu trusty/"
+echo $line_add | sudo tee -a /etc/apt/sources.list
 
-sudo apt-get update
-sudo apt-get install r-base
-sudo apt-get install r-base-dev
+#force-yes is not recommended but this mirror is not auto-authenticated by ubuntu and we want it to work on start-up 
+sudo apt-get update 
+sudo apt-get install r-base -y --force-yes
+sudo apt-get install r-base-dev -y --force-yes

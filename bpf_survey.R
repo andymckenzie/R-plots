@@ -1,7 +1,9 @@
 library(ggplot2)
 library(dplyr)
 
-results_file = "/Users/amckenz/Documents/bpf_survey/Batch_1971592_batch_results.csv"
+setwd("~/Users/amckenz/Documents/bpf_survey/")
+
+results_file = "Batch_1971592_batch_results.csv"
 
 res = read.table(file = results_file, sep = ",", header = T, fill = T)
 
