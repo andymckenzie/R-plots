@@ -1,7 +1,12 @@
 library(ggplot2)
 library(dplyr)
 
+<<<<<<< HEAD
 setwd("/Users/amckenz/Documents/bpf_survey/")
+=======
+setwd("~/Users/amckenz/Documents/bpf_survey/")
+
+>>>>>>> 9d4de99035da84887b56426c28f7478b9e4ecfce
 results_file = "Batch_1971592_batch_results.csv"
 
 res = read.table(file = results_file, sep = ",", header = T, fill = T)
