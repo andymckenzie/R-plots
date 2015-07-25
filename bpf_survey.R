@@ -1,7 +1,8 @@
 library(ggplot2)
 library(dplyr)
 
-results_file = "/Users/amckenz/Documents/bpf_survey/Batch_1971592_batch_results.csv"
+setwd("/Users/amckenz/Documents/bpf_survey/")
+results_file = "Batch_1971592_batch_results.csv"
 
 res = read.table(file = results_file, sep = ",", header = T, fill = T)
 
@@ -69,6 +70,8 @@ Health_N = as.numeric(factor(res_only$Answer.Health,
 	levels = c("Poor", "Fair", "Good", "VeryGood", "Excellent")))
 FriendSigns_N = as.numeric(factor(res_only$Answer.FriendSigns, 
 	levels = c("NoMoreLikely", "Unsure", "YesSlightly", "YesMuch")))
+friend_matters = 
+	length(which(FriendSigns_N == 3 | FriendSigns_N == 4))/length(FriendSigns_N) 
 Education_N = as.numeric(factor(res_only$Answer.Education, 
 	levels = c("HighSchool", "TwoYear", "Bachelor", "ProfDegree", "Other")))
 Afterlife_N = as.numeric(factor(res_only$Answer.Afterlife, 
@@ -103,13 +106,13 @@ summary_stats_fxn <- function(survey_df){
 	
 	#average probability estimates 
 	prob_BP = as.numeric(gsub("%", "", survey_df$Answer.ProbBP))	
-	average_prob_BP = mean(prob_BP)
-	prob_BP_plot = hist(prob_BP)	
+	average_prob_BP = mean(prob_BP, na.rm = TRUE)
+	prob_BP_plot = hist(prob_BP, breaks = 20, ylim = c(0,100)) 
 	
 	average_probs = c(heard_of_p, imagine_p, thinking_p, premortem_p, average_prob_BP)
 	names(average_probs) = c("Heard Of", "Could Imagine", "Thinking About or Above", 
 		"Pre-Legal Death Opinion", "Probability Assignment")
-	
+			
 	return(list(average_probs, heard_of_plot, imagine_plot, thinking_plot, legaldeath_plot, prob_BP_plot))
 
 }
@@ -131,10 +134,15 @@ money_50000_below_total = summary_stats_fxn(res_only[which(res_only$Answer.Money
 ############################################################
 
 #should all be positively but not perfectly correlated to make this more valuable
-cor(Imagine_N, PreMortem_N)
-cor(SignUp_N, Imagine_N)
+cor(Imagine_N, PreMortem_N, use = "na.or.complete")
+cor(SignUp_N, Imagine_N, use = "na.or.complete")
+cor(PreMortem_N, SignUp_N, use = "na.or.complete")
 
 prob_BP = as.numeric(gsub("%", "", res_only$Answer.ProbBP))	
+
+cor(prob_BP, SignUp_N, use = "na.or.complete")
+
+cor(SignUp_N, prob_BP)
 
 #see whether correlated with the probability of BP? 
 plot(Imagine_N, prob_BP) 
@@ -154,4 +162,9 @@ favor_lm = lm(sum_BP_favorability ~ Education_N + res_only$Answer.Employment +
 	res_only$Answer.Gender + res_only$Answer.Age + res_only$Answer.Money + 
 	Religiousness_N + res_only$Answer.Employment + res_only$Answer.HeardOf + 
 	res_only$Answer.Living + res_only$Answer.MainReasonNoBP + 
-	res_only$Answer.ReligionSpecific + res_only$Answer.WhereHeard) 
+	res_only$Answer.ReligionSpecific + res_only$Answer.WhereHeard, na.action = 
+	"na.omit") 
+	
+favor_lm = lm(sum_BP_favorability ~ 
+	res_only$Answer.Gender, na.action = 
+	"na.omit") 
