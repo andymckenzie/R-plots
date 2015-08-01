@@ -1,12 +1,8 @@
-library(ggplot2)
-library(dplyr)
+# library(ggplot2)
+# library(dplyr)
 
-<<<<<<< HEAD
 setwd("/Users/amckenz/Documents/bpf_survey/")
-=======
-setwd("~/Users/amckenz/Documents/bpf_survey/")
 
->>>>>>> 9d4de99035da84887b56426c28f7478b9e4ecfce
 results_file = "Batch_1971592_batch_results.csv"
 
 res = read.table(file = results_file, sep = ",", header = T, fill = T)
@@ -173,3 +169,20 @@ favor_lm = lm(sum_BP_favorability ~ Education_N + res_only$Answer.Employment +
 favor_lm = lm(sum_BP_favorability ~ 
 	res_only$Answer.Gender, na.action = 
 	"na.omit") 
+
+############################################################
+#####           text parsing                        #####
+############################################################
+
+main_reasons = res$Answer.MainReasonNoBP
+
+plot()
+
+other_reasons = res$Answer.ReasonsNoBP
+other_reasons = unlist(strsplit(as.character(other_reasons), "|", fixed = TRUE))
+
+
+table(unlist(strsplit(as.character(other_reasons), "|", fixed = TRUE)))
+
+#want to combine main reason w other reasons 
+
