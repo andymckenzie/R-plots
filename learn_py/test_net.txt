@@ -1,0 +1,6 @@
+geneA	geneB
+geneA	geneC
+geneA	geneD
+geneD	geneE
+geneC	geneD
+geneB	geneC
