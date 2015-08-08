@@ -86,3 +86,9 @@ datout[,1][datout$Comment != ""], "\n Hint: Check the output file for more detai
 }
 # output the results into the directory
 write.table(datout,"Output.csv", row.names=F, sep="," )
+
+#compare to actual age 
+anno = read.table("SampleAnnotationExample55.csv", sep = ",", header = TRUE)
+cor(anno$Age, predictedAge)
+#           [,1]
+# [1,] 0.9792188
