@@ -51,8 +51,6 @@ model_string = "model {
 	sigma ~ dunif(0, 100)
 }
 "
-
-library('rjags')
  
 jags <- jags.model(textConnection(model_string),
                    data = list('x' = x,
