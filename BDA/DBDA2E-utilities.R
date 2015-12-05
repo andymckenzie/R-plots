@@ -79,12 +79,12 @@ if ( createDataFiles ) {
 
 openGraph = function( width=7 , height=7 , mag=1.0 , ... ) {
   if ( .Platform$OS.type != "windows" ) { # Mac OS, Linux
-    tryInfo = try( X11( width=width*mag , height=height*mag , type="cairo" , 
+    tryInfo = try( quartz( width=width*mag , height=height*mag , 
                         ... ) )
     if ( class(tryInfo)=="try-error" ) {
       lineInput = readline("WARNING: Previous graphics windows will be closed because of too many open windows.\nTO CONTINUE, PRESS <ENTER> IN R CONSOLE.\n")
       graphics.off() 
-      X11( width=width*mag , height=height*mag , type="cairo" , ... )
+      quartz( width=width*mag , height=height*mag, ... )
     }
   } else { # Windows OS
     tryInfo = try( windows( width=width*mag , height=height*mag , ... ) )

@@ -3,15 +3,13 @@
 set.seed(42)
 
 coin1 = rbinom(100, size = 1, prob = 0.1)
-coin2 = rbinom(200, size = 1, prob = 0.4)
-coin3 = rbinom(400, size = 1, prob = 0.8)
-coin4 = rbinom(20, size = 1, prob = 0.85) #expecting this one to be shrunken towards the mean 
+coin2 = rbinom(1000, size = 1, prob = 0.5)
+coin3 = rbinom(500, size = 1, prob = 0.95) #expecting this one to be shrunken towards the mean 
 
-y = c(coin1, coin2, coin3, coin4)
+y = c(coin1, coin2, coin3)
 s = c(rep("coin1", times = length(coin1)), 
 	rep("coin2", times = length(coin2)), 
-	rep("coin3", times = length(coin3)), 
-	rep("coin4", times = length(coin4)))
+	rep("coin3", times = length(coin3)))
 	
 out = cbind(y, s)
 

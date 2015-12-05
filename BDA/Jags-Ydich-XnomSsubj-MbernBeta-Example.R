@@ -5,6 +5,7 @@ graphics.off() # This closes all of R's graphics windows.
 rm(list=ls())  # Careful! This clears all of R's memory!
 #------------------------------------------------------------------------------- 
 # Load The data 
+# myData = read.table("ex_8_1_data.csv", sep = "\t", header = T)
 myData = read.csv("ex_8_1_data.csv")
 myData$s = as.factor(myData$s)
 # N.B.: The functions below expect the data to be a data frame, 

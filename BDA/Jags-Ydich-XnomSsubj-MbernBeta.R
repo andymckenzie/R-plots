@@ -32,8 +32,8 @@ genMCMC = function( data , numSavedSteps=50000 , saveName=NULL ) {
     for ( i in 1:Ntotal ) {
       y[i] ~ dbern( theta[s[i]] )
     }
-    for ( s in 1:Nsubj ) {
-      theta[s] ~ dbeta( 2 , 2 ) # N.B.: 2,2 prior; change as appropriate.
+    for ( subj in 1:Nsubj ) {
+      theta[subj] ~ dbeta( 2 , 2 ) # N.B.: 2,2 prior; change as appropriate.
     }
   }
   " # close quote for modelString
@@ -135,7 +135,7 @@ plotMCMC = function( codaSamples , data , compVal=0.5 , rope=NULL ,
   mcmcMat = as.matrix(codaSamples,chains=TRUE)
   chainLength = NROW( mcmcMat )
   Ntheta = length(grep("theta",colnames(mcmcMat)))
-  quartz(width=2.5*Ntheta,height=2.0*Ntheta)
+  openGraph(width=2.5*Ntheta,height=2.0*Ntheta)
   par( mfrow=c(Ntheta,Ntheta) )
   for ( t1Idx in 1:(Ntheta) ) {
     for ( t2Idx in (1):Ntheta ) {
