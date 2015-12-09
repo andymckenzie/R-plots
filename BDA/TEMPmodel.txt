@@ -1,10 +1,12 @@
 
   model {
     for ( i in 1:Ntotal ) {
-      y[i] ~ dbern( theta[s[i]] )
+      y[i] ~ dt( mu[x[i]] , 1/sigma[x[i]]^2 , nu )
     }
-    for ( subj in 1:Nsubj ) {
-      theta[subj] ~ dbeta( 2 , 2 ) # N.B.: 2,2 prior; change as appropriate.
+    for ( j in 1:10 ) { # 10 groups
+      mu[j] ~ dnorm( meanY , 1/(100*sdY)^2 )
+      sigma[j] ~ dunif( sdY/1000 , sdY*1000 )
     }
-  }
+    nu ~ dexp(1/30.0)
+}
   
