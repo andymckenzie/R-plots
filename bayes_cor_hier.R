@@ -9,7 +9,7 @@ set.seed(42)
 library(rjags)
 
 nvars = 2
-nobs = 1000
+nobs = 30
 
 #code for simulation from http://www.r-bloggers.com/simulating-random-multivariate-correlated-data-continuous-variables/
 R = matrix(cbind(1,.9,.2,  .75,1,.7,  .2,.5,1),nrow=3)
@@ -46,6 +46,8 @@ group <- c(rep("1", length = nobs), rep("2", length = nobs),
   rep("3", length = nobs))
 xy <- cbind(x, y, group)
 
+#pairs(data.frame(X[,c(1:nvars)], Y[,c(1:nvars)], Z[,c(1:nvars)]))
+
 # The model string written in the JAGS language
 model_string <- "model {
   for(i in 1:n) {
@@ -57,7 +59,9 @@ model_string <- "model {
 	  cov[1,2,j] <- sigma[1] * sigma[2] * rho[j]
 	  cov[2,1,j] <- sigma[1] * sigma[2] * rho[j]
 	  cov[2,2,j] <- sigma[2] * sigma[2]
-	  rho[j] ~ dunif(-0.5, 0.5)
+	  #rho[j] ~ dunif(-1, 1)
+    #can't have negative values here bc it will not be a positive definite matrix? ...
+    rho[j] ~ dnorm(a, b)T(-1,1)
 	  mu[1,j] ~ dnorm(mean_mu, precision_mu)
 	  mu[2,j] ~ dnorm(mean_mu, precision_mu)
     # JAGS parameterizes the multivariate t using precision (inverse of variance)
@@ -66,6 +70,8 @@ model_string <- "model {
 	}
 
   ## Priors
+  a ~ dbeta(1, 1)
+  b ~ dbeta(1, 1)
   sigma[1] ~ dunif(sigmaLow, sigmaHigh)
   sigma[2] ~ dunif(sigmaLow, sigmaHigh)
   nu <- nuMinusOne+1
@@ -80,6 +86,7 @@ data_list = list(
   group = group,
   nCond = nvars,
   mean_mu = mean(c(x, y), trim=0.2) ,
+
   mean_rho = 1,
   precision_rho = 0.0001,
   precision_mu = 1 / (max(mad(x), mad(y))^2 * 1000000),
@@ -92,15 +99,16 @@ data_list = list(
 inits_list = list(mu=c(mean(x, trim=0.2), mean(y, trim=0.2)), rho=cor(x, y, method="spearman"),
                 sigma = c(mad(x), mad(y)), nuMinusOne = 5)
 
-# The parameters to monitor.
-params <- c("rho", "mu", "sigma", "nu")
 
 # Running the model
 #inits = inits_list,
 model <- jags.model(textConnection(model_string), data = data_list,
                     n.chains = 3, n.adapt=1000)
 update(model, 500) # Burning some samples to the MCMC gods....
-samples <- coda.samples(model, params, n.iter=5000)
+
+# The parameters to monitor.
+params <- c("rho", "mu", "sigma", "nu", "a", "b")
+samples <- coda.samples(model, params, n.iter=1000)
 
 # Inspecting the posterior
 plot(samples)
