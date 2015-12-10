@@ -9,7 +9,7 @@ set.seed(42)
 library(rjags)
 
 nvars = 2
-nobs = 30
+nobs = 200
 
 #code for simulation from http://www.r-bloggers.com/simulating-random-multivariate-correlated-data-continuous-variables/
 R = matrix(cbind(1,.9,.2,  .75,1,.7,  .2,.5,1),nrow=3)
@@ -61,8 +61,12 @@ model_string <- "model {
 	  cov[2,2,j] <- sigma[2] * sigma[2]
 	  #rho[j] ~ dunif(-1, 1)
     #can't have negative values here bc it will not be a positive definite matrix? ...
-    rho[j] ~ dnorm(a, b)T(-1,1)
-	  mu[1,j] ~ dnorm(mean_mu, precision_mu)
+    # rho[j] ~ dnorm(a, b)T(-1,1)
+    #or maybe could extend the beta distribution for the prior? but below doesn't work
+    #rho_s[j] ~ dnorm(a, b)T(-1, 1)
+    rho_s[j] ~ dbeta(a, b)
+    rho[j] <- rho_s[j] * 2 - 1
+    mu[1,j] ~ dnorm(mean_mu, precision_mu)
 	  mu[2,j] ~ dnorm(mean_mu, precision_mu)
     # JAGS parameterizes the multivariate t using precision (inverse of variance)
     # rather than variance, therefore we must invert the covariance matrices.
@@ -70,6 +74,7 @@ model_string <- "model {
 	}
 
   ## Priors
+  #a ~ dunif(-1, 1)
   a ~ dbeta(1, 1)
   b ~ dbeta(1, 1)
   sigma[1] ~ dunif(sigmaLow, sigmaHigh)
@@ -103,12 +108,12 @@ inits_list = list(mu=c(mean(x, trim=0.2), mean(y, trim=0.2)), rho=cor(x, y, meth
 # Running the model
 #inits = inits_list,
 model <- jags.model(textConnection(model_string), data = data_list,
-                    n.chains = 3, n.adapt=1000)
+                    n.chains = 3, n.adapt=500)
 update(model, 500) # Burning some samples to the MCMC gods....
 
 # The parameters to monitor.
 params <- c("rho", "mu", "sigma", "nu", "a", "b")
-samples <- coda.samples(model, params, n.iter=1000)
+samples <- coda.samples(model, params, n.iter=500)
 
 # Inspecting the posterior
 plot(samples)
