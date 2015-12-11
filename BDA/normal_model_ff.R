@@ -55,4 +55,3 @@ runJagsOut <- run.jags( model="TEMPmodel.txt" ,
 codaSamples = as.mcmc.list( runJagsOut )
 
 summary(runJagsOut)
-plot(runJagsOut)
