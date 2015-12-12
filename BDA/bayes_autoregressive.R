@@ -30,14 +30,14 @@ model_string = " model {
     for( teamIndx in 1 : Nteams){
       beta0[teamIndx] ~ dnorm( 0 , 1.0E-12 )
       beta1[teamIndx] ~ dnorm( 0 , 1.0E-12 )
+      ar1[teamIndx] ~ dunif(-1.1,1.1)
     }
     trend[1] <- beta0[id[1]] + beta1[id[1]] * x[1]
-    for( week in 2 : Ndata ) {
-      y[week] ~ dt( mu[week] , tau , nu )
-      mu[week] <- trend[week] + ar1 * ( y[week-1] - trend[week-1] )
-      trend[week] <- beta0[id[week]] + beta1[id[week]] * x[week]
+    for( i in 2 : Ndata ) { #where i = data point
+      y[i] ~ dt( mu[i] , tau , nu )
+      mu[i] <- trend[i] + ar1[id[i]] * ( y[i-1] - trend[i-1] )
+      trend[i] <- beta0[id[i]] + beta1[id[i]] * x[i]
     }
-    ar1 ~ dunif(-1.1,1.1) # or dunif(-0.01,0.01)
     tau ~ dgamma( 0.001 , 0.001 )
     thresh ~ dunif(-183,183)
     nu <- nuMinusOne + 1
