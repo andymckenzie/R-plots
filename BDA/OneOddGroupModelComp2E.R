@@ -1,13 +1,13 @@
 # OneOddGroupModelComp2E.R
 # Accompanies the book:
-#   Kruschke, J. K. (2014). Doing Bayesian Data Analysis: 
+#   Kruschke, J. K. (2014). Doing Bayesian Data Analysis:
 #   A Tutorial with R, JAGS, and Stan. 2nd Edition. Academic Press / Elsevier.
 graphics.off()
 rm(list=ls(all=TRUE))
 source("DBDA2E-utilities.R")
 #require(rjags)
 #require(runjags)
-fileNameRoot="OneOddGroupModelComp2E-" 
+fileNameRoot="OneOddGroupModelComp2E-"
 
 #------------------------------------------------------------------------------
 # THE DATA.
@@ -37,7 +37,7 @@ for ( cIdx in 1:nCond ) {
       }
       nCorrOfSubj[randSubjIdx] = nCorrOfSubj[randSubjIdx]+1
     }
-  } 
+  }
   if ( nToAdd < 0 ) {
     for ( i in 1:abs(nToAdd) ) {
       thisNcorr = 0
@@ -67,16 +67,17 @@ dataList = list(
 
 modelString = "
 model {
+  #each subject has an individual ability theta[s] drawn from a condition-specific beta dstn
   for ( s in 1:nSubj ) {
     nCorrOfSubj[s] ~ dbin( theta[s] , nTrlOfSubj[s] )
-    theta[s] ~ dbeta( aBeta[CondOfSubj[s]] , bBeta[CondOfSubj[s]] ) 
+    theta[s] ~ dbeta( aBeta[CondOfSubj[s]] , bBeta[CondOfSubj[s]] )
   }
 
 #   for ( j in 1:nCond ) {
 #     # Use omega[j] for model index 1, omega0 for model index 2:
-#     aBeta[j] <-       ( equals(mdlIdx,1)*omega[j] 
+#     aBeta[j] <-       ( equals(mdlIdx,1)*omega[j]
 #                       + equals(mdlIdx,2)*omega0  )   * (kappa[j]-2)+1
-#     bBeta[j] <- ( 1 - ( equals(mdlIdx,1)*omega[j] 
+#     bBeta[j] <- ( 1 - ( equals(mdlIdx,1)*omega[j]
 #                       + equals(mdlIdx,2)*omega0  ) ) * (kappa[j]-2)+1
 #   }
 #   for ( j in 1:2 ) {
@@ -87,9 +88,9 @@ model {
 
   for ( j in 1:nCond ) {
     # Use omega[j] for model index 1, omega0 for model index 2:
-    aBeta[j] <-       ( equals(mdlIdx,1)*omega[j] 
+    aBeta[j] <-       ( equals(mdlIdx,1)*omega[j]
                       + equals(mdlIdx,2)*omega0  )   * (kappa[j]-2)+1
-    bBeta[j] <- ( 1 - ( equals(mdlIdx,1)*omega[j] 
+    bBeta[j] <- ( 1 - ( equals(mdlIdx,1)*omega[j]
                       + equals(mdlIdx,2)*omega0  ) ) * (kappa[j]-2)+1
     omega[j] ~ dbeta( a[j,mdlIdx] , b[j,mdlIdx] )
   }
@@ -104,7 +105,7 @@ model {
   bP <- 1
   # a0[model] and b0[model]
   a0[1] <- .48*500       # pseudo
-  b0[1] <- (1-.48)*500   # pseudo 
+  b0[1] <- (1-.48)*500   # pseudo
   a0[2] <- aP            # true
   b0[2] <- bP            # true
   # a[condition,model] and b[condition,model]
@@ -149,41 +150,41 @@ thinSteps=20                 # Number of steps to "thin" (1=keep every step).
 
 # nPerChain = ceiling( ( numSavedSteps * thinSteps ) / nChains ) # Steps per chain.
 # # Create, initialize, and adapt the model:
-# jagsModel = jags.model( "TEMPmodel.txt" , data=dataList , # inits=initsList , 
+# jagsModel = jags.model( "TEMPmodel.txt" , data=dataList , # inits=initsList ,
 #                         n.chains=nChains , n.adapt=adaptSteps )
 # # Burn-in:
 # cat( "Burning in the MCMC chain...\n" )
 # update( jagsModel , n.iter=burnInSteps )
 # # The saved MCMC chain:
 # cat( "Sampling final MCMC chain...\n" )
-# codaSamples = coda.samples( jagsModel , variable.names=parameters , 
+# codaSamples = coda.samples( jagsModel , variable.names=parameters ,
 #                             n.iter=nPerChain , thin=thinSteps )
 
 runJagsOut <- run.jags( method=c("rjags","parallel")[2] ,
-                        model="TEMPmodel.txt" , 
-                        monitor=parameters , 
-                        data=dataList ,  
-                        #inits=initsList , 
+                        model="TEMPmodel.txt" ,
+                        monitor=parameters ,
+                        data=dataList ,
+                        #inits=initsList ,
                         n.chains=nChains ,
                         adapt=adaptSteps ,
-                        burnin=burnInSteps , 
+                        burnin=burnInSteps ,
                         sample=ceiling(numSavedSteps/nChains) ,
                         thin=thinSteps ,
                         summarise=FALSE ,
                         plots=FALSE )
 codaSamples = as.mcmc.list( runJagsOut )
 
-# resulting codaSamples object has these indices: 
+# resulting codaSamples object has these indices:
 #   codaSamples[[ chainIdx ]][ stepIdx , paramIdx ]
 
 save( codaSamples , file=paste0(fileNameRoot,"Mcmc.Rdata") )
 
-#------------------------------------------------------------------------------- 
+#-------------------------------------------------------------------------------
 # Display diagnostics of chain:
 
 parameterNames = varnames(codaSamples) # get all parameter names
 show(parameterNames)
-for ( parName in c("mdlIdx","omega[1]","omega0","kappa[1]","theta[1]") ) { 
+for ( parName in c("mdlIdx","omega[1]","omega0","kappa[1]","theta[1]") ) {
   diagMCMC( codaSamples , parName=parName ,
             saveName=fileNameRoot , saveType="eps" )
 }

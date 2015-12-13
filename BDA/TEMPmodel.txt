@@ -1,12 +1,12 @@
 
   model {
-    for ( i in 1:Ntotal ) {
-      y[i] ~ dt( mu[x[i]] , 1/sigma[x[i]]^2 , nu )
+    for ( s in 1:Nsubj ) {
+      z[s] ~ dbin( theta[s] , N[s] )
+      theta[s] ~ dbeta( omega*(kappa-2)+1 , (1-omega)*(kappa-2)+1 ) 
     }
-    for ( j in 1:10 ) { # 10 groups
-      mu[j] ~ dnorm( meanY , 1/(100*sdY)^2 )
-      sigma[j] ~ dunif( sdY/1000 , sdY*1000 )
-    }
-    nu ~ dexp(1/30.0)
-}
+    omega ~ dbeta( 1 , 1 )
+    kappa <- kappaMinusTwo + 2
+    #kappaMinusTwo ~ dgamma( 0.01 , 0.01 )  # mean=1 , sd=10 (generic vague)
+    kappaMinusTwo ~ dgamma( 1.105125 , 0.1051249 )  # mode=1 , sd=10 
+  }
   
