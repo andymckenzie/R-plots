@@ -6,13 +6,19 @@ library(rjags)
 library(reshape2)
 
 #need to run in the BDA folder
-data = read.csv("FFstats.csv")
+if(ESPN){
+  data = read.csv("FFStats.csv")
+  data$ID = 1:length(data$Owner)
+  datam = data[ , c("ID", paste0("W", 1:12, "F"))]
+  dataa = melt(datam, id = "ID", value.name = "Points")
+}
 
-data$ID = 1:length(data$Owner)
-
-datam = data[ , c("ID", paste0("W", 1:12, "F"))]
-
-dataa = melt(datam, id = "ID", value.name = "Points")
+if(fleaflicker){
+  data = read.csv("/Users/amckenz/Documents/github/FantasyFootball/FFStats.csv")
+  data$ID = 1:length(data$Owner)
+  datam = data[ , c("ID", paste0("W", 1:12, "F"))]
+  dataa = melt(datam, id = "ID", value.name = "Points")
+}
 
 #load the data for each team
 

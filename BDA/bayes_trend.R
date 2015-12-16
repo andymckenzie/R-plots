@@ -1,21 +1,22 @@
-#model of fantasy success for each team thus far 
+#model of fantasy success for each team thus far
 #inspired by http://www.ling.uni-potsdam.de/~vasishth/JAGSStanTutorial/SorensenVasishthMay12014.pdf
 
 library(rjags)
 library(reshape2)
 
-data = read.csv("/Users/amckenz/Documents/github/FantasyFootball/FFStats.csv")
+#load data for either league
+if(ESPN){
+	data = read.csv("/Users/amckenz/Documents/github/FantasyFootball/FFStats.csv")
+	data$ID = 1:length(data$Owner)
+	datam = data[ , c("ID", paste0("W", 1:12, "F"))]
+	dataa = melt(datam, id = "ID", value.name = "Points")
+}
 
-data$ID = 1:length(data$Owner)
 
-datam = data[ , c("ID", paste0("W", 1:12, "F"))]
-
-dataa = melt(datam, id = "ID", value.name = "Points")
-
-#load the data for each team 
+#load the data for each team
 
 ########################
-# preparing data for JAGS 
+# preparing data for JAGS
 
 ffdata.dat = list(id = as.integer(dataa$ID),
 	points = dataa$Points,
@@ -24,7 +25,7 @@ ffdata.dat = list(id = as.integer(dataa$ID),
 	I = length(unique(dataa$ID)))
 
 ########################
-# JAGS model; switching to the textConnection trick 
+# JAGS model; switching to the textConnection trick
 
 model_string = "
 	# Fixing data to be used in model definition
@@ -60,16 +61,16 @@ model_string = "
 	Sigma.u <- inverse(Omega.u)
 	Omega.u ~ dwish( R, 2 )
 	}"
-  
+
 ffdata.mod <- jags.model( textConnection(model_string),
 	data = ffdata.dat,
 	n.chains = 4,
 	n.adapt = 100)
-  
+
 ffdata.res <- coda.samples( ffdata.mod,
 	var = c("beta","sigma.e", "Sigma.u", "u"),
 	n.iter = 500,
 	thin = 5 )
-  
+
 summary(ffdata.res)
 plot(ffdata.res)
