@@ -16,6 +16,8 @@ dataa = melt(datam, id = "ID", value.name = "Points")
 
 #load the data for each team
 
+#to predict next week
+
 ########################
 # preparing data for JAGS
 #also make a team variable so that we can estimate this for each group
@@ -53,8 +55,6 @@ ffdata_mod <- jags.model( textConnection(model_string),
 
 update(ffdata_mod, 500) # burn-in
 
-if(F){
-
 ffdata_res <- coda.samples( ffdata_mod,
 	var = c("ar1", "beta0", "beta1", "tau", "nu"),
 	n.iter = 500,
@@ -63,6 +63,5 @@ ffdata_res <- coda.samples( ffdata_mod,
 summary(ffdata_res)
 plot(ffdata_res)
 
-}
 
 # }
