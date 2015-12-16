@@ -107,7 +107,6 @@ predict_matchup <- function(var1, var2){
   mean_diff_team1 = sum(team1 - team2 > 0)/length(team1)
 
   print(prob_team1)
-  print(mean_diff_team1)
 
 }
 
