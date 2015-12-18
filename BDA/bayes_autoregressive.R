@@ -110,7 +110,10 @@ predict_matchup <- function(var1, var2){
 
 }
 
-
+#trying to compare to AR model from non-bayes model
+r = as.ts(as.numeric(datam[datam$ID == 3, !colnames(datam) %in% "ID"]),
+  start = 1, end = 14)
+arima(r)
 
 
 # }
