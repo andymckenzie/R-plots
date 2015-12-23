@@ -1,12 +1,32 @@
 
+  data {
+    int<lower=1> Ntotal ;
+    int x[Ntotal] ;
+    real y[Ntotal] ;
+    real meanY ;
+    real sdY ;
+  }
+  transformed data {
+    real unifLo ;
+    real unifHi ;
+    real normalSigma ;
+    real expLambda ;
+    unifLo <- sdY/1000 ;
+    unifHi <- sdY*1000 ;
+    normalSigma <- sdY*100 ;
+    expLambda <- 1/30.0 ;
+  }
+  parameters {
+    real<lower=0> nu ; 
+    real mu[2] ;               // 2 groups
+    real<lower=0> sigma[2] ;   // 2 groups
+  }
   model {
-    for ( s in 1:Nsubj ) {
-      z[s] ~ dbin( theta[s] , N[s] )
-      theta[s] ~ dbeta( omega*(kappa-2)+1 , (1-omega)*(kappa-2)+1 ) 
+    sigma ~ uniform( unifLo , unifHi ) ; // vectorized
+    mu ~ normal( meanY , normalSigma ) ; // vectorized
+    nu ~ exponential( expLambda ) ;
+    for ( i in 1:Ntotal ) {
+      y[i] ~ student_t( nu , mu[x[i]] , sigma[x[i]] ) ;
     }
-    omega ~ dbeta( 1 , 1 )
-    kappa <- kappaMinusTwo + 2
-    #kappaMinusTwo ~ dgamma( 0.01 , 0.01 )  # mean=1 , sd=10 (generic vague)
-    kappaMinusTwo ~ dgamma( 1.105125 , 0.1051249 )  # mode=1 , sd=10 
   }
   
