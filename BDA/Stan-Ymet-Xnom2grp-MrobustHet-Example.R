@@ -33,7 +33,7 @@ summaryInfo = smryMCMC( mcmcCoda , RopeMuDiff=c(-0.5,0.5) ,
                         saveName=fileNameRoot )
 show(summaryInfo)
 # Display posterior information:
-plotMCMC( mcmcCoda , datFrm=myDataFrame , yName="Score" , xName="Group" ,
+plotMCMC( mcmcCoda , datFrm=myDataFrame , yName="DaysLive" , xName="Group" ,
           RopeMuDiff=c(-0.5,0.5) , RopeSdDiff=c(-0.5,0.5), RopeEff=c(-0.1,0.1) ,
           pairsPlot=TRUE , saveName=fileNameRoot , saveType=graphFileType )
 #-------------------------------------------------------------------------------
