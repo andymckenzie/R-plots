@@ -1,2 +1,4 @@
 nba/*.txt
 nba/*.zip
+*.eps
+*.Rdata
