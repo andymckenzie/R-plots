@@ -5,6 +5,9 @@
 library(rjags)
 library(reshape2)
 
+ESPN = FALSE
+fleaflicker = TRUE
+
 #need to run in the BDA folder
 if(ESPN){
   data = read.csv("FFStats.csv")
@@ -14,9 +17,9 @@ if(ESPN){
 }
 
 if(fleaflicker){
-  data = read.csv("/Users/amckenz/Documents/github/FantasyFootball/FFStats.csv")
-  data$ID = 1:length(data$Owner)
-  datam = data[ , c("ID", paste0("W", 1:12, "F"))]
+  data = read.table("fleaflicker_2015.txt", sep = "\t")
+  data$ID = 1:length(data$V1)
+  datam = data[ , c("ID", paste0("V", 2:(ncol(data)-1)))]
   dataa = melt(datam, id = "ID", value.name = "Points")
 }
 
@@ -48,6 +51,16 @@ model_string = " model {
     thresh ~ dunif(-183,183)
     nu <- nuMinusOne + 1
     nuMinusOne ~ dexp(1/29)
+
+    #predictions for week 15
+    trend_bindy <- beta0[id[1]] + beta1[id[1]] * 15
+    mu_bindy <-  trend[i] + ar1[id[i]] * ( y[i-1] - trend[i-1] )
+    y_bindy <- dt( mu_bindy , tau , nu )
+    mu_rope  <-  beta[1] + beta[2]*20
+
+    y[i] ~ dt( mu[i] , tau , nu )
+    FEV20ns ~ dnorm(mu20ns,tau)
+
 }"
 
 # if(F){
@@ -59,8 +72,6 @@ ffdata_mod <- jags.model( textConnection(model_string),
 
 update(ffdata_mod, 500) # burn-in
 
-if(F){
-
 ffdata_res <- coda.samples( ffdata_mod,
 	var = c("ar1", "beta0", "beta1", "tau", "nu"),
 	n.iter = 500,
@@ -69,6 +80,5 @@ ffdata_res <- coda.samples( ffdata_mod,
 summary(ffdata_res)
 plot(ffdata_res)
 
-}
 
 # }

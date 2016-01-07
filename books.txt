@@ -1,0 +1,110 @@
+title	author	date published	link to source	read
+papyrus of ani	ancient egypt	-1250	http://www.amazon.com/The-Egyptian-Book-Dead-Integrated/dp/0811864898/ref=sr_1_1?s=books&ie=UTF8&qid=1339720479&sr=1-1&keywords=Papyrus+of+Ani	0
+odyssey	homer	-800	http://www.amazon.com/The-Odyssey-Fitzgerald-Translation/dp/0374525749	0
+iliad	homer	-800	http://records.viu.ca/~johnstoi/homer/iliad_title.htm	0
+oedipus the king	sophocles	-440	http://www.gutenberg.org/files/31/31-h/31-h.htm	0
+antigone	sophocles	-440	http://www.gutenberg.org/files/31/31-h/31-h.htm	0
+prometheus bound	aeschylus	-415	http://www.gutenberg.org/files/27458/27458-h/27458-h.htm	0
+frogs 	aristophones	-405	http://www.gutenberg.org/cache/epub/7998/pg7998.html	0
+apology	plato	-400	http://www.bartleby.com/2/1/1.html	0
+crito 	plato 	-400	http://www.bartleby.com/2/1/2.html	0
+phaedo	plato	-400	http://www.bartleby.com/2/1/	0
+aeneid	virgil	-19	http://www.amazon.com/The-Aeneid-Penguin-Classics-Virgil/dp/0140440518	0
+metamorphoses	ovid (hughes) 	8	http://www.amazon.com/Tales-Ovid-24-Passages-Metamorphoses/dp/0374525870	0
+beowulf	anglo-saxon poet	800	http://www.sparknotes.com/nofear/lit/beowulf/	0
+arabian nights	middle east	1000	http://www.amazon.com/The-Arabian-Nights-Thousand-Classics/dp/0375756752	0
+lyric poems	petrarch	1350	http://www.amazon.com/Petrarchs-Lyric-Poems-Sparse-Lyrics/dp/0674663489	0
+inferno	dante	1400	http://www.gutenberg.org/files/1001/1001-h/1001-h.htm	1
+don quixote	cervantes	1615	http://www.amazon.com/Don-Quixote-Miguel-De-Cervantes/dp/0060934344/	0.5
+paradise lost	milton	1667	http://www.paradiselost.org/	0
+gulliver's travels	swift	1735	http://www.amazon.com/Gullivers-Travels-Penguin-Classics-Jonathan/dp/0141439491	1
+candide	voltaire			1
+pride & prejudice	austen	1813	http://www.gutenberg.org/ebooks/1342	1
+persuasion	austen	1817	http://www.gutenberg.org/ebooks/105	0
+don juan	byron	1824	http://www.gutenberg.org/files/21700/21700-h/21700-h.htm	0.25
+faust I&II	goethe	1831	http://www.gutenberg.org/ebooks/14591	0
+tell tale heart	poe	1843	http://ebooks.gutenberg.us/Alex_Collection/poe-tell-707.htm	0
+crime & punishment	dostoevsky	1866	http://www.amazon.com/Punishment-Bantam-Classics-Fyodor-Dostoevsky/dp/0553211757	1
+alice in wonderland	carroll	1866	http://www.gutenberg.org/ebooks/11	0
+war & peace	tolstoy	1869	http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985	1
+anna karenina	tolstoy	1877	http://www.amazon.com/Anna-Karenina-Penguin-Classics-Tolstoy/dp/0140449175	1
+brothers karamazov	dostoevsky	1880	http://www.amazon.com/The-Brothers-Karamazov-Fyodor-Dostoevsky/dp/0374528373	1
+flatland	abbott	1880	http://www.gutenberg.org/ebooks/97	1
+stories	chekov	1890	http://www.amazon.com/Stories-Anton-Chekhov/dp/0553381008	1
+sherlock holmes	doyle	1892	http://www.gutenberg.org/ebooks/1661	0
+importance earnest	wilde	1895	http://www.gutenberg.org/ebooks/844	0
+devil's dictionary 	bierce	1911	http://www.amazon.com/The-Devils-Dictionary-Ambrose-Bierce/dp/0195126270	0
+swann's way	proust	1913	http://www.amazon.com/Swanns-Way-Penguin-Classics-Edition/dp/0142437964	0
+metamorphosis	kafka	1915	https://records.viu.ca/~johnstoi/stories/kafka-e.htm	1
+love song j alfred	eliot	1920	http://www.bartleby.com/198/1.html	1
+gatsby 	fitzgerald	1921	http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567	1
+waste land	eliot	1922	http://www.bartleby.com/201/1.html	0
+ulysses	joyce	1922	http://www.gutenberg.org/ebooks/4300	1
+the dead	joyce		http://www.online-literature.com/james_joyce/958/; best story from the dubliners	0
+prophet	gibran	1923	http://www-personal.umich.edu/~jrcole/gibran/prophet/prophet.htm	0
+the trial	kafka	1924	http://www.amazon.com/The-Trial-Translation-Based-Restored/dp/0805209999	0
+cthulhu	lovecraft	1926	http://archive.org/stream/CallOfCthulhu/The_Call_of_Cthulhu_-_Lovecraft#page/n0/mode/2up	0
+sun also rises	hemingway	1926	http://www.amazon.com/The-Also-Rises-Ernest-Hemingway/dp/0743297334	0
+brave new world	huxley	1931	http://www.amazon.com/Brave-New-World-Aldous-Huxley/dp/0060929871	1
+mice & men	steinbeck	1937	http://www.amazon.com/Mice-Men-Steinbeck-Centennial-Edition/dp/0142000671	1
+right ho, jeeves	wodehouse	1934	http://www.amazon.com/The-Code-Woosters-P-G-Wodehouse/dp/0394720288	1
+big sleep	chandler	1938	http://www.amazon.com/The-Big-Sleep-Raymond-Chandler/dp/0394758285	0
+then there were none	christie	1939	http://www.amazon.com/And-Then-There-Were-None/dp/0312979479	0
+johnny gun	trumbo	1939	http://www.amazon.com/Johnny-Got-His-Dalton-Trumbo/dp/0553274325	0
+glass bead game	hesse	1943	http://www.amazon.com/The-Glass-Bead-Game-Magister/dp/080501246X	1
+tree brooklyn	smith	1943	http://www.amazon.com/Tree-Grows-Brooklyn-Betty-Smith/dp/006092988X	0
+aleph	borges	1945	http://www.phinnweb.org/links/literature/borges/aleph.html	0
+nineteen eighty four	orwell	1949	http://www.amazon.com/1984-Signet-Classics-George-Orwell/dp/0451524934	1
+ficciones	borges	1950	http://www.amazon.com/Ficciones-English-Translation-Jorge-Borges/dp/0802130305	1
+waves	woolf	1950	http://www.amazon.com/The-Waves-Annotated-Virginia-Woolf/dp/0156031574	1
+east of eden 	steinbeck	1952	http://www.amazon.com/East-Eden-John-Steinbeck/dp/0142000655	0
+fellowship	tolkein	1954	http://www.amazon.com/Fellowship-Ring-Lord-Rings-Part/dp/0618002227	1
+lolita	nabokov	1955	http://www.amazon.com/Lolita-Anniversary-Edition-Vladimir-Nabokov/dp/0679723161	1
+things fall apart	achebe	1958	http://www.amazon.com/Things-Fall-Apart-Chinua-Achebe/dp/0385474547	1
+catch-22	heller	1961	http://www.amazon.com/Catch-22-Joseph-Heller/dp/0684833395	1
+pale fire	nabokov	1962	http://www.amazon.com/Pale-Fire-Vladimir-Nabokov/dp/0679723420	0
+cat's cradle	vonnegut	1963	http://www.amazon.com/Cats-Cradle-Novel-Kurt-Vonnegut/dp/038533348X	0
+cookoo's nest	kesey	1963	http://www.amazon.com/One-Flew-Over-Cuckoos-Nest/dp/0451163966	1
+dune	herbert	1965	http://www.amazon.com/Dune-Chronicles-Book-1/dp/0441172717	1
+solitude	marquez	1967	http://www.amazon.com/One-Hundred-Years-Solitude-P-S/dp/0060883286	1
+master margarita	bulgakov	1967	http://www.amazon.com/The-Master-Margarita-Mikhail-Bulgakov/dp/0679760806	0
+godfather	puzo	1969	http://www.amazon.com/The-Godfather-Signet-Mario-Puzo/dp/0451167716	0
+fear & loathing	thompson	1971	http://www.amazon.com/Fear-Loathing-Las-Vegas-American/dp/0679785892	1
+princess bride	goldman	1973	http://www.amazon.com/The-Princess-Bride-Morgensterns-Anniversary/dp/034543014X	1
+gravity's rainbow	pynchon	1973	http://www.amazon.com/Gravitys-Rainbow-Penguin-Classics-Edition/dp/0143039946	1
+shogun	clavell	1975	http://www.amazon.com/Shogun-James-Clavell/dp/0440178002	0
+bloody chamber	carter	1979	http://www.amazon.com/The-Bloody-Chamber-Other-Stories/dp/014017821X	0
+hhgttg	adams	1979	http://www.amazon.com/Hitchhikers-Guide-Galaxy-Douglas-Adams/dp/0345391802	1
+blood meridian 	mccarthy	1981	http://www.amazon.com/Blood-Meridian-Evening-Redness-West/dp/0679728759	0
+midnight's children	rushdie	1981	http://www.amazon.com/Midnights-Children-Salman-Rushdie/dp/0140132708	0
+shawshank 	king	1982	http://www.amazon.com/Different-Seasons-Signet-Stephen-King/dp/0451167538/	0
+house spirits	allende	1982	http://www.amazon.com/The-House-Spirits-Isabel-Allende/dp/0553273914	0
+cholera	marquez	1985	http://www.amazon.com/Love-Cholera-Gabriel-Garcia-Marquez/dp/140003468X	1
+lonesome dove	mcmurthy 	1985	http://www.amazon.com/Lonesome-Dove-Larry-McMurtry/dp/067168390X	0
+handmaid's tale	atwood	1985	http://www.amazon.com/Handmaids-Tale-Margaret-Eleanor-Atwood/dp/1556902166	0
+watchmen	moore	1987	http://www.amazon.com/Watchmen-Alan-Moore/dp/0930289234/	1
+progress love	munro	2005	runaway	1
+cladius	graves	1989	http://www.amazon.com/Claudius-Autobiography-Tiberius-Murdered-International/dp/067972477X	0
+things carried	o'brien	1990	http://www.amazon.com/The-Things-They-Carried-OBrien/dp/0618706410	1
+stand	king	1991	http://www.amazon.com/The-Stand-Expanded-Edition-Complete/dp/0451169530	0
+game thrones	martin	1995	http://www.amazon.com/Game-Thrones-Song-Fire-ebook/dp/B000QCS8TW/	0
+wind-up bird	murakami	1997	http://www.amazon.com/The-Wind-Up-Bird-Chronicle-Novel/dp/0679775439	1
+american gods	gaiman	2001	http://www.amazon.com/American-Gods-Novel-Neil-Gaiman/dp/0060558121	1
+rebecca	du marier	1938	http://www.amazon.com/Rebecca-Daphne-Du-Maurier/dp/0380730405	0
+gone with wind	mitchell 	1936	http://www.amazon.com/Gone-With-Wind-Margaret-Mitchell/dp/068483068X	0
+count monte cristo	dumas	1845	http://www.gutenberg.org/ebooks/1184	0
+jane eyre	bronte	1847	http://www.gutenberg.org/ebooks/1260	0
+farenheight 451	bradbury	1953	http://www.amazon.com/Fahrenheit-451-Novel-Ray-Bradbury/dp/1451673310	1
+canterbury tales 	chaucer (ackryod) 	1400	http://www.amazon.com/The-Canterbury-Tales-A-Retelling/dp/0670021229/ref=pd_sim_b_5	0
+invisible man	ellison	1952	http://www.amazon.com/Invisible-Man-Novel-Ralph-Ellison/dp/0375507914	0
+night	weisel	1955	http://www.amazon.com/Night-Oprahs-Book-Club-Wiesel/dp/0374500010/ref=pd_sim_b_1	0
+sawyer	twain			1
+huck finn	twain			1
+catch in rye	salinger			1
+bell jar	plath			0
+moby dick	melville			1
+unbearable lightness	kundera	1982	http://www.amazon.com/Unbearable-Lightness-Being-Milan-Kundera/dp/0060932139	1
+scarlet letter	hawthorne			0.25
+gilgamesh	middle east			0
+satyricon	petronius	60	http://archive.org/stream/trimalchiosdinne00petr/trimalchiosdinne00petr_djvu.txt; http://www.amazon.com/The-Satyricon-Meridian-classics-Petronius/dp/0452010055	0
+miserables	hugo		have on kindle	0.25
