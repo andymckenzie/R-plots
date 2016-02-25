@@ -1,0 +1,50 @@
+Timestamp	What is the date of the morning you woke up from sleep for this entry? (in month/day/year; can say "last night" bc timestamped)	What was the number of the pill you took? 	How long did it take you to get to sleep last night? (~; in hours) 	How much did you sleep last night? (~; in hours) 	What was the quality of your sleep last night? 	How helpful was the pill in getting you to sleep? 	How helpful was the pill in helping you stay asleep? 	Did you wear blue blockers for >= 1 hour pre-sleep? 	Did you wake up due to an alarm? 	Did you have >= 2 alcoholic drinks? 	Were there any other extenuating circumstances? 	What's your estimated probability that it was placebo? (0-1 scale; obviously prior is 0.2)		How long before sleep did you take the pill? 
+4/24/2015 9:50:27	Last night	1	0.1	8.25	8	7	8	Yes	No	No				
+4/26/2015 10:09:47	Last night	2	0.1	9.25	9	7	8	Yes	No	No	Didn't get much sleep the night before 			
+4/27/2015 9:16:52	last night	3	0.25	7.75	7	8	7	Yes	No	No	neck pain; woke up due to jackhammer outside ... ughhhh	0.1		1
+4/28/2015 8:41:13	last nigh	4	0.6	7.25	6	7	5	Yes	Yes	No	bleeding gums night before maybe bc slightly anemic due to blood donation, kind of scared me 	0.2		1
+4/29/2015 9:23:04	Last night	5	0.25	8	8	5	7	No	No	No	Walked back from Aprils 	0.3		1.5
+4/30/2015 10:33:34	Last night	6	0.25	6.25	4	8	4	Yes	No	No	Yes terrible allergies that ruined my sleep, this data point should be discarded... 	0.1		1.25
+5/2/2015 10:28:43	ln	7	0.15	8	6	6	5	Yes	No	No	yes, very warm in room (81 degrees on wake) 	0.25		1.5
+5/3/2015 7:54:17	ln	8	0.25	4	4	3	3	Yes	No	No	terrible allergies -- throw out data point	0.2		1
+5/8/2015 9:42:25	last night	9	0.1	8	9	8	8	Yes	Yes	No		0.1		1
+5/11/2015 9:56:14	last night	10	0.1	7.75	9	10	9	Yes	Yes	No		0.06		1
+5/14/2015 10:24:05	ln	11	1	7.25	7	7	8	No	No	No	ate hella pb night before which dehydrated me 	0.2		1.25
+5/16/2015 13:44:11	ln	12	0.01	7.5	7	10	9	Yes	No	Yes	forgot to turn on A/C in my room which i think led to lots of problem with my sleep ln	0.05		1.5
+5/17/2015 11:17:16	ln	13	0.5	8.5	9	5	7	Yes	No	No		0.2		1.25
+5/18/2015 11:30:05	ln	14	0.25	7.5	7	9	8	Yes	Yes	No	lots of anxiety due to upcoming travel might have messed up my sleep 	0.1		1
+6/8/2015 12:41:58	ln	16 (think may have lost/skipped 15...) 	0.5	8.5	8	10	8	Yes	Yes	No	due for ketchup sleep 			
+6/10/2015 10:18:06	ln	17	0.25	9	9	7	7	Yes	No	No	so tired anyway that it's hard to say whether this helped	0.15		0.5
+6/12/2015 9:11:53	ln	18	0.5	7.5	8	5	7	No	No	No		0.3		0.5
+6/16/2015 9:26:33	ln	19	0.3	8	8	7	7	No	Yes	No		0.2		0.5
+6/17/2015 9:33:52	ln	20	0.3	7.25	7	10	6	Yes	No	No	really hot in the room; also had an anxiety dream 	0.05		1.5
+6/19/2015 9:15:50	ln	22	0.25	7.5	8	8	8	Yes	No	No	couldn't breathe through nose easily 	0.2		1.5
+6/22/2015 8:56:37	ln	21	0.25	8	8	9	7	Yes	No	No	fasted previous day	0.1		1
+6/23/2015 9:30:27	ln	23	1	7.5	7	5	8	No	No	No		0.5		1
+6/24/2015 23:43:55	ln	24	1	6.5	4	6	5	No	Yes	No	hella warm in my apt which killed me	0.4		1
+6/25/2015 10:49:06	ln 	25	0.5	9	8	7	8	Yes	No	No	really tired cuz didn't get much sleep the night before	0.25		1
+6/29/2015 10:35:17	ln	26	1	8.5	7	5	5	Yes	No	No	ketchup	0.3		1.25
+7/1/2015 11:13:58	ln	27	1	6.75	4	4	7	Yes	No	No	very bad anxiety + poor sleep hygeine + heart palpitations + took caffeine at 2:50, which might have not been a good play 	0.4		1.5
+7/2/2015 9:04:32	ln	28	0.25	6.75	8	5	7	No	No	No	had to wake up early bc of meeting	0.4		1.5
+7/6/2015 8:54:12	ln	29	0.1	8	9	10	7	Yes	No	No	i think i would've been insanely tired anyways bc i needed ketchup sleep 	0.05		1
+7/7/2015 9:47:33	ln	30	0.1	8.5	9	10	9	No	No	No	maybe needed ketchup...	0.05		1
+7/8/2015 8:24:34	ln	31	0.1	6.5		6	5	Yes	No	No		0.3		0.5
+7/9/2015 8:43:51	ln	32	0.5	7	7	6	6	No	No	No		0.23		1
+7/10/2015 9:06:27	ln	33	0.5	6.5	6	7	6	Yes	No	No	no humiidifer + extremely hot in room ...	0.2		1.5
+7/15/2015 9:33:39	ln	34	0.5	7	8	7	5	Yes	Yes	No	weird night, already tired, couldn't find eye mask, etc	0.2		1.5
+7/18/2015 9:06:51	ln	35	0.1	6.5	6	8	7	Yes	No	No	at april's	0.2		1.25
+7/24/2015 10:06:07	ln	36	0.1	7.75	9	7	8	Yes	No	No	needed hella ketchup 	0.2		2
+7/25/2015 11:16:07	ln	37	0.5	6.75	4	6	5	Yes	No	No	kind of hot in room?	0.4		1
+7/26/2015 8:38:06	ln	38	0.1	7.25	8	9	7	Yes	Yes	No	ketchup and had to wake up early	0.1		1
+8/14/2015 10:09:35	ln	39	1	6.25	6	5	4	Yes	Yes	No	travel recovering + anxiety = really weird night 	0.25		1.5
+8/19/2015 10:54:24	ln	40	0.25	8.5	8	4	5	Yes	No	No	needed hella ketchup 	0.2		1.5
+8/24/2015 10:29:37	ln	41	0.25	7.5	9	5	7	Yes	No	No	needed some ketchup 	0.2		1.5
+9/2/2015 9:47:20	ln	42	0.1	8.5	9	10	8	Yes	Yes	No		0.01		1.25
+9/5/2015 23:04:39	2 nights ago	43	0.5	5	4	9	1	No	No	No	may want to throw this out, lots of anxiety post grant and at aprils	0.1		1.5
+9/6/2015 7:13:06	ln	44	0.1	6	9	9	5	Yes	No	No		0.05		1.5
+9/21/2015 10:21:56	ln	45	0.25	8		10	8	Yes	No	No		0.2		1.25
+10/1/2015 15:41:22	last night	46	0.1	7.5	9	10	7	No	No	No	ketchup	0.02		1.25
+11/5/2015 2:08:26	ln (two nights ago) 	47	0.75	7	9	9	7	Yes	No	No		0.3		1.5
+11/6/2015 10:45:20	ln	48	0.5	8.25	9	5	8	Yes	No	No	ketchup 	0.3		1
+11/10/2015 11:35:26	ln	49	2	8	8	1	8	Yes	No	No	was playing heroes	0.5		2
+11/12/2015 13:33:17	ln	50	0.25	9	10	6	8	Yes	No	No	need some ketchup	0.5		1.5
