@@ -1,0 +1,15 @@
+data{
+real x[N];
+}
+parameters {
+real<lower=0> y_inv[N];
+}
+transformed parameters {
+real<lower=0> y[N];
+y <- 1 / y_inv; // change
+increment_log_prob( -2 * log(y_inv) ); // adjustment
+}
+model {
+  y ~ gamma(2,4);
+  x ~ normal(y, 1); 
+}
