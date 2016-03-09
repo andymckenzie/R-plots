@@ -17,4 +17,4 @@ mcmc_data = list(
   ratio_contact = chem$ratio*chem$contact,
   conversion = chem$conversion)
 
-mcmc = stan(file = "bda_15_3.stan", data = mcmc_data, pars = c("beta", "constant"), iter = 1000, nchains = 1)
+mcmc = stan(file = "bda_15_3.stan", data = mcmc_data, pars = c("beta", "constant", "beta_mean", "sigma"), iter = 1000, chains = 1, control = list(max_treedepth = 20, stepsize = 5))

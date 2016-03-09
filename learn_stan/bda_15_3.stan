@@ -13,8 +13,9 @@ data{
 }
 parameters{
   real constant;
+  real beta_mean;
   real beta[9];
-  // real<lower=0> sigma;
+  real sigma; 
 }
 transformed parameters{
   real yhat[N];
@@ -30,8 +31,8 @@ transformed parameters{
       beta[9] * ratio_contact[i];
 }
 model{
-//   for(i in 1:9)
-//     // beta[i] ~ normal(0, 1);
-//     beta[i] ~ student_t(5, 0, 1);
-  conversion ~ normal(yhat, 1);
+  beta_mean ~ normal(0, 1);
+  for(i in 1:9)
+    beta[i] ~ normal(beta_mean, 5);
+  conversion ~ normal(yhat, sigma);
 }
