@@ -22,6 +22,7 @@ transformed data {
 parameters {
   vector[N1] y1;
   vector[N2] y2;
+  real<lower=0> sigma2;
 }
 model {
   vector[N] y;
@@ -30,5 +31,5 @@ model {
 
   y ~ multi_normal(mu,Sigma);
   for (n in 1:N1)
-    z1[n] ~ normal(3, y1[n], 1);
+    z1[n] ~ normal(y1[n], sigma2);
 }
