@@ -25,6 +25,7 @@ mcmc = stan("GP/bda_21_2.stan", data = test_GP, pars = c("y1", "y2"), iter = 200
 res = summary(mcmc)$summary
 y1_mean = res[grep("y1", rownames(res)), "mean"]
 
-#yeah, this is definitely not working
 plot(age_know$age, age_know$know)
-lines(c(rep(0, 18), y1_mean),col=3)
+lines(x = age_know$age, y = y1_mean),col=3)
+
+y2_mean = res[grep("y2", rownames(res)), "mean"]
