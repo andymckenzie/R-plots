@@ -1,7 +1,7 @@
 
-setwd("/Users/amckenz/Documents/github/R-plots/learn_stan/") 
-
 library(rstan)
+
+setwd("/Users/amckenz/Documents/github/R-plots/learn_stan/") 
 
 sleep_data = rnorm(48, 7.25, 1)
 pill_type = round(runif(48, 0.5, 5.5))
