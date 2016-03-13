@@ -28,11 +28,11 @@ functions {
 }
 data {
   int<lower=0> N;
-  int<lower=0> d;
+  int<lower=0> d; // number of predictors
   int<lower=0> num_nodes;
   int<lower=1> num_middle_layers;
   matrix[N,d] X;
-  int y[N];
+  real y[N];
   int<lower=0> Nt;
   matrix[Nt,d] Xt;
 }
@@ -41,6 +41,7 @@ transformed data {
   num_layers <- num_middle_layers + 2;
 }
 parameters {
+  real<lower=0> sigma;
   vector[num_layers] bias;
   matrix[num_nodes,d] beta_first;
   matrix[num_nodes,num_nodes] beta_middle[num_middle_layers];
@@ -49,7 +50,8 @@ parameters {
 model{
   vector[N] alpha;
   alpha <- calculate_alpha(X, bias, beta_first, beta_middle, beta_output);
-  y ~ bernoulli_logit(alpha);
+  for(i in 1:N)
+    y[i] ~ student_t(3, alpha[i], sigma);
 
   //priors
   bias ~ normal(0,1);
@@ -60,10 +62,8 @@ model{
 }
 generated quantities{
   vector[Nt] predictions;
-  {
-    vector[Nt] alpha;
-    alpha <- calculate_alpha(Xt, bias, beta_first, beta_middle, beta_output);
-    for(i in 1:Nt)
-      predictions[i] <- inv_logit(alpha[i]);
-  }
+  vector[Nt] alpha;
+  alpha <- calculate_alpha(Xt, bias, beta_first, beta_middle, beta_output);
+  for(i in 1:Nt)
+    predictions[i] <- inv_logit(alpha[i]);
 }
