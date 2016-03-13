@@ -11,6 +11,7 @@ transformed data {
   vector[N1+N2] x;
   vector[N1+N2] mu;
   cov_matrix[N1+N2] Sigma;
+  matrix[N1+N2,N1+N2] L;
   N <- N1 + N2;
   for (n in 1:N1) x[n] <- x1[n];
   for (n in 1:N2) x[N1 + n] <- x2[n];
@@ -19,6 +20,7 @@ transformed data {
     for (j in 1:N)
       Sigma[i,j] <- exp(-pow(x[i] - x[j],2))
         + if_else(i==j, 0.1, 0.0);
+  L <- cholesky_decompose(Sigma);
 }
 parameters {
   vector[N2] y2;
@@ -27,5 +29,5 @@ parameters {
   vector[N] y;
   for (n in 1:N1) y[n] <- y1[n];
   for (n in 1:N2) y[N1 + n] <- y2[n];
-  y ~ multi_normal(mu,Sigma);
+  y ~ multi_normal_cholesky(mu,L);
 }

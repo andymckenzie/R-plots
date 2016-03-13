@@ -15,7 +15,7 @@ mcmc_data = list(
 
 # mcmc = stan("GP_example_fit.stan", data = mcmc_data, pars = c("eta_sq", "inv_rho_sq", "sigma_sq"), iter = 200, chains = 1)
 
-x2 = rnorm(100, 3, 1)
+x2 = rnorm(100, 2, 1)
 
 mcmc_data_predict = list(
   N1 = length(x),
