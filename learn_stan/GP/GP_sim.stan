@@ -10,7 +10,7 @@ transformed data {
     mu[i] <- 0;
   for (i in 1:N)
     for (j in 1:N)
-      Sigma[i,j] <- exp(-pow(x[i] - x[j], 2)) + if_else(i==j, 0.01, 0.0);
+      Sigma[i,j] <- exp(-pow(x[i] - x[j], 2)) + if_else(i==j, 0.2, 0.0);
 }
 parameters {
   vector[N] y;
