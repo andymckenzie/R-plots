@@ -49,7 +49,7 @@ ggsave(plot_save, file = "prob_cryo_given_signup.jpeg", width = 8, height = 8)
 means = aggregate(ProbabilityQuestions.8. ~ cut_number(surv$Age, n = 6), data = surv, mean)
 ses = aggregate(ProbabilityQuestions.8. ~ cut_number(surv$Age, n = 6), data = surv, se)
 plot_save = plot_aggregate(means, ses, "Probability That Cryonics Works", "Age")
-ggsave(plot_save, file = "prob_cryo_given_age.tiff", width = 8, height = 8)
+ggsave(plot_save, file = "prob_cryo_given_age.jpeg", width = 8, height = 8)
 
 surv$Cryonics_Sign_Num = surv$Cryonics
 surv$Cryonics_Sign_Num[surv$Cryonics_Sign_Num == ""] = NA
@@ -84,14 +84,14 @@ means = means[!means$Country == "", ]
 ses = aggregate(Cryonics_Sign_Num ~ Country, data = surv, se)
 ses = ses[!ses$Country == "", ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Country")
-ggsave(plot_save, file = "interest_cryo_given_country.tiff", width = 8, height = 8)
+ggsave(plot_save, file = "interest_cryo_given_country.jpeg", width = 8, height = 8)
 
 means = aggregate(Cryonics_Sign_Num ~ AmericanParties, data = surv, mean)
 means = means[-c(1:2), ]
 ses = aggregate(Cryonics_Sign_Num ~ AmericanParties, data = surv, se)
 ses = ses[-c(1:2), ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Party (U.S.)")
-ggsave(plot_save, file = "interest_cryo_given_us_party.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_us_party.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ PoliticsShort, data = surv, mean)
 means = means[!means$PoliticsShort == "", ]
@@ -103,19 +103,19 @@ means[means$PoliticsShort == "Social democratic, for example Scandinavian countr
 ses = aggregate(Cryonics_Sign_Num ~ PoliticsShort, data = surv, se)
 ses = ses[!ses$PoliticsShort == "", ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Politics")
-ggsave(plot_save, file = "interest_cryo_given_politics.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_politics.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ EAIdentity, data = surv, mean)
 ses = aggregate(Cryonics_Sign_Num ~ EAIdentity, data = surv, se)
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Effective Altruist Identification?")
-ggsave(plot_save, file = "interest_cryo_given_EA.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_EA.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ ReligiousViews, data = surv, mean)
 means = means[!means$ReligiousViews == "", ]
 ses = aggregate(Cryonics_Sign_Num ~ ReligiousViews, data = surv, se)
 ses = ses[!ses$ReligiousViews == "", ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Religious Views")
-ggsave(plot_save, file = "interest_cryo_given_religion.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_religion.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ ReligionType, data = surv, mean)
 means[means$ReligionType == "Christian (Other non-Protestant, eg Eastern Orthodox)", "ReligionType"] = "Christian (Other non-Protestant)"
@@ -123,7 +123,7 @@ means = means[!means$ReligionType == "", ]
 ses = aggregate(Cryonics_Sign_Num ~ ReligionType, data = surv, se)
 ses = ses[!ses$ReligionType == "", ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Religious Type")
-ggsave(plot_save, file = "interest_cryo_given_religion_type.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_religion_type.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ ASD, data = surv, mean)
 means[means$ASD == "Not formally, but I personally believe I have (or had) it", "ASD"] = "Yes (By Personal Belief)"
@@ -132,21 +132,21 @@ means = means[!means$ASD == "", ]
 ses = aggregate(Cryonics_Sign_Num ~ ASD, data = surv, se)
 ses = ses[!ses$ASD == "", ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Autism Spectrum Disorder")
-ggsave(plot_save, file = "interest_cryo_given_ASD.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_ASD.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ EducationCredentials, data = surv, mean)
 means = means[-1, ]
 ses = aggregate(Cryonics_Sign_Num ~ EducationCredentials, data = surv, se)
 ses = ses[-1, ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Education Credentials")
-ggsave(plot_save, file = "interest_cryo_given_education.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_education.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ Profession, data = surv, mean)
 means = means[-1, ]
 ses = aggregate(Cryonics_Sign_Num ~ Profession, data = surv, se)
 ses = ses[-1, ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Profession")
-ggsave(plot_save, file = "interest_cryo_given_Profession.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_Profession.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ AbortionLaws.SQ001., data = surv, mean)
 means = means[-1, ]
@@ -154,7 +154,7 @@ means = means[match(c("Pro-Life", "Lean Pro-Life", "No strong opinion", "Lean Pr
 ses = aggregate(Cryonics_Sign_Num ~ AbortionLaws.SQ001., data = surv, se)
 ses = ses[-1, ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Stance Towards Abortion", order = TRUE)
-ggsave(plot_save, file = "interest_cryo_given_abortion.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_abortion.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ Vegetarian, data = surv, mean)
 means = means[-1, ]
@@ -163,7 +163,7 @@ means = means[match(c("No", "Restrict meat", "Yes, I am vegetarian", "Yes, I am 
 ses = aggregate(Cryonics_Sign_Num ~ Vegetarian, data = surv, se)
 ses = ses[-1, ]
 plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "", order = TRUE)
-ggsave(plot_save, file = "interest_cryo_given_vegetarian.tiff", width = 8, height = 6)
+ggsave(plot_save, file = "interest_cryo_given_vegetarian.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ Race, data = surv, mean)
 means = means[!means$Race == "", ]
