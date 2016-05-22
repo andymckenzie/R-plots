@@ -75,9 +75,27 @@ plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Gender")
 ggsave(plot_save, file = "interest_cryo_given_Gender.jpeg", width = 8, height = 6)
 
 means = aggregate(Cryonics_Sign_Num ~ cut_number(surv$Income, n = 6), data = surv, mean)
+means[,1] = as.character(means[,1])
+means[1,1] = "$0 to $5000/year"
+means[2,1] = "$5000 to $18100/year"
+means[3,1] = "$18100 to $35000/year"
+means[4,1] = "$35000 to $60000/year"
+means[5,1] = "$60000 to $100000/year"
+means[6,1] = "$100000 to $2.4 million/year"
+means[,1] = as.factor(means[,1])
 ses = aggregate(Cryonics_Sign_Num ~ cut_number(surv$Income, n = 6), data = surv, se)
-plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Income (USD)")
-ggsave(plot_save, file = "interest_cryo_given_income.jpeg", width = 8, height = 8)
+plot_save = plot_aggregate(means, ses, "Interest in Cryonics", "Income (USD)", order = TRUE)
+ggsave(plot_save, file = "interest_cryo_given_income.jpeg", width = 8, height = 6)
+cor.test(surv$Cryonics_Sign_Num, surv$Income, use = "na.or.complete")
+# 	Pearson's product-moment correlation
+# data:  surv$Cryonics_Sign_Num and surv$Income
+# t = -1.470909, df = 1060, p-value = 0.1416125
+# alternative hypothesis: true correlation is not equal to 0
+# 95 percent confidence interval:
+#  -0.10500300507  0.01506383699
+# sample estimates:
+#            cor
+# -0.04513257316 
 
 means = aggregate(Cryonics_Sign_Num ~ Country, data = surv, mean)
 means = means[!means$Country == "", ]
