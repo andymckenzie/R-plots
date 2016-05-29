@@ -1,4 +1,4 @@
-#' @title Write df with delimiter style.
+#' @title Write a data frame to a file with delimiter style.
 #' @description A wrapper function for write.table that has the same options as read.delim.
 #' @param df Data frame to be written.
 #' @param file Full or relative path to file to be written.
