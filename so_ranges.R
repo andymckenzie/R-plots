@@ -6,4 +6,5 @@ in_range <- function(chr_num, chr_start, chr_stop){
  res = any(as.numeric(chr_start) > chr_matches$Start & as.numeric(chr_stop) < chr_matches$End)
  return(res)
 }
-apply(file2, 1, function(x) in_range(x[1], x[2], x[3]))
+res = apply(file2, 1, function(x) in_range(x[1], x[2], x[3]))
+variants = file2[res, ]
