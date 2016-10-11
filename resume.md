@@ -56,7 +56,9 @@ Review Articles
 
 Conference Presentations
 ---------
-1. **McKenzie AT**, Wang M, Song WM, Zhu J, Nave KA, Popko B, Casaccia P, Zhang B. Network Modeling of Myelin Dysregulation in Alzheimer’s Disease (2015). Society for Neuroscience, Chicago, Illinois. Poster presentation.
+
+1. **McKenzie AT**, Wang M, Katsyv I, Song WM, Xianxiao Z, Popko B, Aaker J, Del Tredici K, Nave KA, Zhu J, Schadt EE, Casaccia P, Zhang B. Oligodendrocyte-Enriched Gene Networks Reveal Novel Pathways and Key Targets in the Pathogenesis of Alzheimer’s Disease. (2016) Alzheimer's Association International Conference, Toronto, Canada. Oral Presentation.
+1. **McKenzie AT**, Wang M, Song WM, Zhu J, Nave KA, Popko B, Casaccia P, Zhang B. Network Modeling of Myelin Dysregulation in Alzheimer’s Disease. (2015) Society for Neuroscience, Chicago, Illinois. Poster presentation.
 1. **McKenzie AT**, Pomerantsev AP, Leppla SH. (2011) Iterative motif searching for DNA elements regulating the CO2 response of Bacillus anthracis. NIH Post-baccalaureate Research Festival, Bethesda, Maryland. Poster presentation.
 1. **McKenzie AT**, Cleaveland JM. (2010) Curve fitting active time functions and the impact of a change over delay. Society for Quantitative Analyses of Behavior, San Antonio, Texas. Poster presentation.
 1. **McKenzie AT**, Cleaveland JM. (2009) An Active Time Account of Belke’s 1992 Result. Society for Quantitative Analyses of Behavior, Phoenix, Arizona. Poster presentation.
@@ -67,4 +69,5 @@ Teaching Experience
 TA for AP Biology, 2009
 
 **Icahn School of Medicine at Mount Sinai**  
-TA for Brain & Behavior, 2014, 2015
+TA for Brain & Behavior, 2014, 2015  
+TA for Summer School in Computational Genomics, 2016
