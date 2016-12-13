@@ -44,6 +44,9 @@ Choice behavior in *Columba livia* under interval reward schedules
 
 Research Articles
 ---------
+1. **McKenzie AT**, Katsyv I, Song WM, Wang M, Zhang B. DGCA: A comprehensive R package for Differential Gene Correlation Analysis. BMC Syst Biol. 2016;10(1):106.
+1. Wang M, Roussos P, **McKenzie AT**, Zhou X, Kajiwara Y, Brennand KJ, De Luca GC, Crary JF, Casaccia P, Buxbaum JD, Ehrlich M, Gandy S, Goate A Katsel P, Schadt E, Haroutunian V, Zhang B. Integrative network analysis of nineteen brain regions identifies molecular signatures and networks underlying selective regional vulnerability to Alzheimer's disease. Genome Med. 2016;8(1):104.
+1. Kajiwara Y, **McKenzie AT**, Dorr N, Gama Sosa MA, Elder G, Schmeidler J, Dickstein DL, Bozdagi , Zhang B, Buxbaum J. The human-specific CASP4 gene product contributes to Alzheimer-related synaptic and behavioural deficits. Hum Mol Genet. 2016;pii: ddw265.
 1. Chary M, Park EH, **McKenzie AT**, Sun J, Manini AF, Genes N. Signs & symptoms of Dextromethorphan exposure from YouTube. PLoS ONE. 2014;9(2):e82452.
 1. **McKenzie AT**, Pomerantsev AP, Sastalla I, Martens C, Ricklefs SM, Virtaneva K, Anzick S, Porcella SF, Leppla SH. Transcriptome analysis identifies Bacillus anthracis genes that respond to CO2 through an AtxA-dependent mechanism. BMC Genomics. 2014;15:229.
 1. Sastalla I, Crown D, Masters SL, **McKenzie AT**, Leppla SH, Moayeri M. Transcriptional analysis of the three Nlrp1 paralogs in mice. BMC Genomics. 2013;14:188.
@@ -56,7 +59,6 @@ Review Articles
 
 Conference Presentations
 ---------
-
 1. **McKenzie AT**, Wang M, Katsyv I, Song WM, Xianxiao Z, Popko B, Aaker J, Del Tredici K, Nave KA, Zhu J, Schadt EE, Casaccia P, Zhang B. Oligodendrocyte-Enriched Gene Networks Reveal Novel Pathways and Key Targets in the Pathogenesis of Alzheimer’s Disease. (2016) Alzheimer's Association International Conference, Toronto, Canada. Oral Presentation.
 1. **McKenzie AT**, Wang M, Song WM, Zhu J, Nave KA, Popko B, Casaccia P, Zhang B. Network Modeling of Myelin Dysregulation in Alzheimer’s Disease. (2015) Society for Neuroscience, Chicago, Illinois. Poster presentation.
 1. **McKenzie AT**, Pomerantsev AP, Leppla SH. (2011) Iterative motif searching for DNA elements regulating the CO2 response of Bacillus anthracis. NIH Post-baccalaureate Research Festival, Bethesda, Maryland. Poster presentation.
