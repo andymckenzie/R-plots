@@ -39,9 +39,9 @@ neural_plot = ggplot(neural_data, aes(y = Process_search, x = log(Mean_Timescale
 neural_plot = neural_plot + geom_point() + theme_bw() +
   geom_errorbarh(aes(xmax = log(Max_Timescale_ns, 10),
     xmin = log(Min_Timescale_ns, 10), height = .2)) + xlab("Timescale") + ylab("") +
-    scale_x_continuous(breaks = c(-3,0,3,6,9, 10.77815, 12.5563, 13.93651),
+    scale_x_continuous(breaks = c(-3,0,3,6,9, 10.77815, 12.5563, 13.93651, 15.41363, 16.4988, 17.49881),
     labels = c("Picoseconds", "Nanoseconds", "Microseconds", "Milliseconds",
-      "Seconds", "Minutes", "Hours", "Days"), limits = c(-3.5, 14))
+      "Seconds", "Minutes", "Hours", "Days", "Months", "Years", "Decades"), limits = c(-3.5, 14))
 
 gb1 = ggplot_build(cognitive_plot)
 gb2 = ggplot_build(neural_plot)

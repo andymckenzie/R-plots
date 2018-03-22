@@ -10,13 +10,13 @@ MD/PhD Candidate
 
 **Vassar College, Poughkeepsie, NY (2006 - 2010)**  
 BA, General Honors  
-*Major*: Neuroscience & Behavior (Award Winner), *Minor*: Math  
+*Major*: Neuroscience & Behavior (Award Winner),  *Minor*: Math
 
 Grants and Awards
 ---------
 **Ruth L. Kirschstein NRSA Pre-doctoral Fellowship (2015 - Present)**  
 National Institute of Aging, NIH  
-Mentors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.  
+Mentors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.
 
 **Post-baccalaureate Intramural Research Trainee (2010 - 2012)**  
 National Institute of Allergic and Infectious Disease, NIH  
@@ -24,26 +24,26 @@ Mentor: Stephen Leppla, Ph.D.
 
 Research Experience
 ---------
-**Icahn School of Medicine at Mount Sinai (06/13 - Present)**  
-Graduate Student Researcher  
+**Icahn School of Medicine at Mount Sinai (06/13 - Present)**   
+Thesis: Multiscale modeling of oligodendrocytes and myelin in Alzheimer’s Disease   
 Advisors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.  
-Network biology of oligodendrocytes and myelin in Alzheimer's disease  
 
 **Icahn School of Medicine at Mount Sinai (09/12 - 10/14)**  
-Medical Student Researcher, Tox-Tweet Group  
-Advisors: Nicholas Genes, M.D., Ph.D.; Alex Manini, M.D.   
 Mining social media to monitor emerging drug use  
+Advisors: Nicholas Genes, M.D., Ph.D.; Alex Manini, M.D.  
 
 **National Institute of Allergic and Infectious Diseases, Bethesda, MD (06/10 - 05/12)**  
-Research Trainee; Advisor: Stephen Leppla, Ph.D.  
 Toxin gene expression in *Bacillus anthracis*  
+Research Trainee; Advisor: Stephen Leppla, Ph.D.  
 
 **Vassar College Psychology Department (09/08 - 05/10)**  
+Choice behavior in *Columba livia* under interval reward schedules  
 Research Assistant; Advisor: J. Mark Cleaveland, Ph.D.  
-Choice behavior in *Columba livia* under interval reward schedules
 
 Research Articles
 ---------
+1. **McKenzie AT**, Moyon S, Wang M, Katsyv I, Song WM, Zhou X, Dammer EB, Duong DM, Aaker J, Zhao Y, Beckmann N, Wang P, Zhu J, Lah JJ, Seyfried NT, Levey AI, Katsel P, Haroutunian V, Schadt EE, Popko B, Casaccia P, Zhang B. Multiscale network modeling of oligodendrocytes reveals molecular components of myelin dysregulation in Alzheimer's disease. Mol Neurodegener. 2017 12(1):82.
+1. Huang KL, Marcora E, Pimenova AA, Di Narzo AF, Kapoor M, Jin SC, Harari O, Bertelsen S, Fairfax BP, Czajkowski J, Chouraki V, Grenier Boley B, Bellenguez C, Deming Y, **McKenzie AT**, Raj T, Renton AE, Budde J, Smith A, Fitzpatrick A, Bis JC, DeStefano A, Adams HHH, Ikram MA, van der Lee S, Del-Aguila JL, Fernandez MV, Ibañez L; International Genomics of Alzheimer’s Project.; Alzheimer’s Disease NeuroimagingInitiative., Sims R, Escott-Price V, Mayeux R, Haines JL, Farrer LA, Pericak-Vance MA, Lambert JC, van Duijn C, Launer L, Seshadri S, Williams J, Amouyel P, Schellenberg GD, Zhang B, Borecki I, Kauwe JSK, Cruchaga C, Hao K, Goate AM. A common haplotype lowers PU.1 expression in myeloid cells and delays onset of Alzheimer’s disease. Nat Neurosci. 2017.
 1. **McKenzie AT**, Katsyv I, Song WM, Wang M, Zhang B. DGCA: A comprehensive R package for Differential Gene Correlation Analysis. BMC Syst Biol. 2016;10(1):106.
 1. Wang M, Roussos P, **McKenzie AT**, Zhou X, Kajiwara Y, Brennand KJ, De Luca GC, Crary JF, Casaccia P, Buxbaum JD, Ehrlich M, Gandy S, Goate A Katsel P, Schadt E, Haroutunian V, Zhang B. Integrative network analysis of nineteen brain regions identifies molecular signatures and networks underlying selective regional vulnerability to Alzheimer's disease. Genome Med. 2016;8(1):104.
 1. Kajiwara Y, **McKenzie AT**, Dorr N, Gama Sosa MA, Elder G, Schmeidler J, Dickstein DL, Bozdagi , Zhang B, Buxbaum J. The human-specific CASP4 gene product contributes to Alzheimer-related synaptic and behavioural deficits. Hum Mol Genet. 2016;pii: ddw265.
@@ -72,4 +72,5 @@ TA for AP Biology, 2009
 
 **Icahn School of Medicine at Mount Sinai**  
 TA for Brain & Behavior, 2014, 2015  
-TA for Summer School in Computational Genomics, 2016
+TA for Summer School in Computational Genomics, 2016  
+Instructor for CREEDS RNA-Seq and Genomics Courses, 2017
