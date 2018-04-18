@@ -1,44 +1,44 @@
 Andrew Thomas McKenzie
 ======================
-1470 Madison Avenue, NY, NY, 10029  
+1470 Madison Avenue, NY, NY, 10029
 amckenz@gmail.com
 
 Education
 ---------
-**Icahn School of Medicine at Mount Sinai (2012 - Present)**  
+**Icahn School of Medicine at Mount Sinai (2012 - Present)**
 MD/PhD Candidate
 
-**Vassar College, Poughkeepsie, NY (2006 - 2010)**  
-BA, General Honors  
+**Vassar College, Poughkeepsie, NY (2006 - 2010)**
+BA, General Honors
 *Major*: Neuroscience & Behavior (Award Winner),  *Minor*: Math
 
 Grants and Awards
 ---------
-**Ruth L. Kirschstein NRSA Pre-doctoral Fellowship (2015 - Present)**  
-National Institute of Aging, NIH  
+**Ruth L. Kirschstein NRSA Pre-doctoral Fellowship (2015 - Present)**
+National Institute of Aging, NIH
 Mentors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.
 
-**Post-baccalaureate Intramural Research Trainee (2010 - 2012)**  
-National Institute of Allergic and Infectious Disease, NIH  
+**Post-baccalaureate Intramural Research Trainee (2010 - 2012)**
+National Institute of Allergic and Infectious Disease, NIH
 Mentor: Stephen Leppla, Ph.D.
 
 Research Experience
 ---------
-**Icahn School of Medicine at Mount Sinai (06/13 - Present)**   
-Thesis: Multiscale modeling of oligodendrocytes and myelin in Alzheimer’s Disease   
-Advisors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.  
+**Icahn School of Medicine at Mount Sinai (06/13 - Present)**
+Thesis: Multiscale modeling of oligodendrocytes and myelin in Alzheimer’s Disease
+Advisors: Bin Zhang, Ph.D.; Patrizia Casaccia, M.D., Ph.D.
 
-**Icahn School of Medicine at Mount Sinai (09/12 - 10/14)**  
-Mining social media to monitor emerging drug use  
-Advisors: Nicholas Genes, M.D., Ph.D.; Alex Manini, M.D.  
+**Icahn School of Medicine at Mount Sinai (09/12 - 10/14)**
+Mining social media to monitor emerging drug use
+Advisors: Nicholas Genes, M.D., Ph.D.; Alex Manini, M.D.
 
-**National Institute of Allergic and Infectious Diseases, Bethesda, MD (06/10 - 05/12)**  
-Toxin gene expression in *Bacillus anthracis*  
-Research Trainee; Advisor: Stephen Leppla, Ph.D.  
+**National Institute of Allergic and Infectious Diseases, Bethesda, MD (06/10 - 05/12)**
+Toxin gene expression in *Bacillus anthracis*
+Research Trainee; Advisor: Stephen Leppla, Ph.D.
 
-**Vassar College Psychology Department (09/08 - 05/10)**  
-Choice behavior in *Columba livia* under interval reward schedules  
-Research Assistant; Advisor: J. Mark Cleaveland, Ph.D.  
+**Vassar College Psychology Department (09/08 - 05/10)**
+Choice behavior in *Columba livia* under interval reward schedules
+Research Assistant; Advisor: J. Mark Cleaveland, Ph.D.
 
 Research Articles
 ---------
@@ -67,10 +67,15 @@ Conference Presentations
 
 Teaching Experience
 ---------
-**Poughkeepsie High School**  
+**Poughkeepsie High School**
 TA for AP Biology, 2009
 
-**Icahn School of Medicine at Mount Sinai**  
-TA for Brain & Behavior, 2014, 2015  
-TA for Summer School in Computational Genomics, 2016  
-Instructor for CREEDS RNA-Seq and Genomics Courses, 2017
+**Icahn School of Medicine at Mount Sinai**
+TA for Brain & Behavior, 2014, 2015
+TA for Summer School in Computational Genomics, 2016
+Instructor for CREEDS RNA-Seq and Genomics Courses, 2017  
+
+Volunteering Experience
+---------
+**East Harlem Health Outreach Partnership**
+Senior Clinician, 2016-2018
